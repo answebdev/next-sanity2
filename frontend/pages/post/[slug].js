@@ -44,11 +44,11 @@ const Post = ({ post }) => {
         body = [],
     } = post;
     return (
-        <article>
+        <article style={{ padding: '4em' }}>
             <h1>{title}</h1>
             <span>By {name}</span>
             {categories && (
-                <ul>
+                <ul style={{ listStyle: 'none' }}>
                     Posted in
                     {categories.map(
                         (category) => (
