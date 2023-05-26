@@ -53,6 +53,8 @@ const Index = ({ posts }) => {
                   width={350}
                   height={250}
                 /> */}
+
+
               </div>
             )
         )}

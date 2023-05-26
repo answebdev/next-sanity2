@@ -16,19 +16,22 @@ import navStyles from '../styles/Nav.module.css';
 
 const Nav = () => {
     return (
-        <nav className={navStyles.nav}>
-            <ul>
-                <li>
-                    <Link href='/'>Home</Link>
-                </li>
-                <li>
-                    <Link href='/about'>About</Link>
-                </li>
-            </ul>
-        </nav>
+        <div className='navbar'>
+            <nav className={navStyles.nav}>
+                <ul>
+                    <li>
+                        <Link href='/'>Home</Link>
+                    </li>
+                    <li>
+                        <Link href='/about'>About</Link>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     );
 };
 
 export default Nav;
 
 // Source: https://github.com/bradtraversy/next-crash-course
+// See also: https://reacthustle.com/blog/next-js-add-navbar-to-all-pages
