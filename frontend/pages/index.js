@@ -3,6 +3,7 @@ import Link from 'next/link';
 import groq from 'groq';
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url';
+import Navbar from '../components/navbar';
 
 // Live Site: https://bacon-blog.vercel.app/
 // Deployed Studio: https://bacon-blog.sanity.studio/desk
@@ -20,10 +21,12 @@ const Index = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
+      {/* <div>
         <Link style={{ color: 'tomato', paddingRight: '10px' }} href={'/'}>Home</Link>
         <Link style={{ color: 'tomato' }} href={'/about'}>About</Link>
-      </div>
+      </div> */}
+
+      <Navbar />
 
       <h1>Bacon Blog</h1>
 

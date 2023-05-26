@@ -5,6 +5,7 @@ import { PortableText } from '@portabletext/react';
 import client from '../../client';
 import Link from 'next/link';
 import Image from 'next/image';
+import Navbar from '../../components/navbar';
 
 function urlFor(source) {
     return imageUrlBuilder(client).image(source);
@@ -46,10 +47,12 @@ const Post = ({ post }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div>
+            {/* <div>
                 <Link style={{ color: 'tomato', paddingRight: '10px' }} href={'/'}>Home</Link>
                 <Link style={{ color: 'tomato' }} href={'/about'}>About</Link>
-            </div>
+            </div> */}
+
+            <Navbar />
 
             <h1>{title}</h1>
             <span>By {name}</span>
