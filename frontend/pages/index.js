@@ -4,6 +4,7 @@ import groq from 'groq';
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url';
 
+// Live Site: https://bacon-blog.vercel.app/
 // Deployed Studio: https://bacon-blog.sanity.studio/desk
 
 function urlFor(source) {
