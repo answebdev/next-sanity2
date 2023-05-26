@@ -36,7 +36,7 @@ const Post = ({ post }) => {
         body = [],
     } = post;
 
-    const titleTag = `Random Blog | ${title}`;
+    const titleTag = `Bacon Blog | ${title}`;
 
     return (
         <article style={{ padding: '4em' }}>
@@ -55,7 +55,7 @@ const Post = ({ post }) => {
             <span>By {name}</span>
             {categories && (
                 <ul style={{ listStyle: 'none' }}>
-                    Posted in
+                    Posted in:
                     {categories.map(
                         (category) => (
                             <li key={category}>{category}</li>
