@@ -68,4 +68,6 @@ export async function getStaticProps() {
   };
 }
 
+export const revalidate = 60;
+
 export default Index;
