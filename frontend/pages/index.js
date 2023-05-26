@@ -26,8 +26,7 @@ const Index = ({ posts }) => {
         <Link style={{ color: 'tomato' }} href={'/about'}>About</Link>
       </div> */}
 
-
-      <Nav />
+      {/* <Nav /> */}
 
       <h1>Bacon Blog</h1>
 
