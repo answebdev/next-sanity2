@@ -4,6 +4,8 @@ import groq from 'groq';
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url';
 
+// Deployed Studio: https://bacon-blog.sanity.studio/desk
+
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
 }
