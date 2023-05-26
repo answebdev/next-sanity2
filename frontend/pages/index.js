@@ -3,7 +3,7 @@ import Link from 'next/link';
 import groq from 'groq';
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url';
-import Navbar from '../components/navbar';
+import Nav from '../components/Nav';
 
 // Live Site: https://bacon-blog.vercel.app/
 // Deployed Studio: https://bacon-blog.sanity.studio/desk
@@ -27,7 +27,7 @@ const Index = ({ posts }) => {
       </div> */}
 
 
-      <Navbar />
+      <Nav />
 
       <h1>Bacon Blog</h1>
 
