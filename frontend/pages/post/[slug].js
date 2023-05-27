@@ -8,34 +8,37 @@ import Image from 'next/image';
 import Nav from '../../components/Nav';
 import { Code } from '../../components/Code';
 
-const components = {
-    types: {
-        code: (props) => {
-            return (<Code language={props.value.language} code={props.value.code} highlightedLines={props.value.highlightedLines} />);
-        }
-    }
-};
+// const codeComponents = {
+//     types: {
+//         code: (props) => {
+//             return (<Code language={props.value.language} code={props.value.code} highlightedLines={props.value.highlightedLines} />);
+//         }
+//     }
+// };
 
 function urlFor(source) {
     return imageUrlBuilder(client).image(source);
 }
 
-// const ptComponents = {
-//     types: {
-//         image: ({ value }) => {
-//             if (!value?.asset?._ref) {
-//                 return null;
-//             }
-//             return (
-//                 <img
-//                     alt={value.alt || ' '}
-//                     loading='lazy'
-//                     src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-//                 />
-//             );
-//         },
-//     },
-// };
+const ptComponents = {
+    types: {
+        image: ({ value }) => {
+            if (!value?.asset?._ref) {
+                return null;
+            }
+            return (
+                <img
+                    alt={value.alt || ' '}
+                    loading='lazy'
+                    src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+                />
+            );
+        },
+        code: (props) => {
+            return (<Code language={props.value.language} code={props.value.code} highlightedLines={props.value.highlightedLines} />);
+        }
+    },
+};
 
 const Post = ({ post }) => {
     const {
@@ -83,9 +86,7 @@ const Post = ({ post }) => {
                     />
                 </div>
             )}
-            {/* <PortableText value={body} components={ptComponents} /> */}
-            <PortableText value={body} components={components} />
-            {/* <Link style={{ color: 'tomato' }} href={'/'}>Home</Link> */}
+            <PortableText value={body} components={ptComponents} />
         </article>
     );
 };
