@@ -4,6 +4,7 @@
 import { useRouter } from "next/router";
 import Layout from '../components/Layout';
 import '../styles/globals.css';
+import '../styles/prism-material-dark.css';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

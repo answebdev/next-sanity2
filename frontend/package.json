@@ -15,7 +15,8 @@
     "groq": "^3.11.1",
     "next": "13.4.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-refractor": "^2.1.7"
   },
   "devDependencies": {
     "eslint": "8.41.0",

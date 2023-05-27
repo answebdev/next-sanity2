@@ -66,5 +66,20 @@ export default defineType({
       type: 'image',
       options: { hotspot: true },
     }),
+    defineArrayMember({
+      type: 'code',
+      options: {
+        language: 'JavaScript',
+        languageAlternatives: [
+          { title: 'HTML', value: 'html' },
+          { title: 'CSS', value: 'css' },
+          { title: 'JavaScript', value: 'js' },
+          { title: 'JSX', value: 'jsx' },
+          { title: 'SASS', value: 'sass' },
+          { title: 'Liquid', value: 'liquid' },
+          { title: 'Bash', value: 'bash' },
+        ]
+      }
+    }),
   ],
 });
