@@ -75,7 +75,7 @@ const Post = ({ post }) => {
                 </div>
             )}
             <PortableText value={body} components={ptComponents} />
-            <Link style={{ color: 'tomato' }} href={'/'}>Home</Link>
+            {/* <Link style={{ color: 'tomato' }} href={'/'}>Home</Link> */}
         </article>
     );
 };
