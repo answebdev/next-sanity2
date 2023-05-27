@@ -3,9 +3,6 @@ import groq from 'groq';
 import imageUrlBuilder from '@sanity/image-url';
 import { PortableText } from '@portabletext/react';
 import client from '../../client';
-import Link from 'next/link';
-import Image from 'next/image';
-import Nav from '../../components/Nav';
 import { Code } from '../../components/Code';
 
 // const codeComponents = {
@@ -59,13 +56,6 @@ const Post = ({ post }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* <div>
-                <Link style={{ color: 'tomato', paddingRight: '10px' }} href={'/'}>Home</Link>
-                <Link style={{ color: 'tomato' }} href={'/about'}>About</Link>
-            </div> */}
-
-            {/* <Nav /> */}
-
             <h1>{title}</h1>
             <span>By {name}</span>
             {categories && (
@@ -86,7 +76,9 @@ const Post = ({ post }) => {
                     />
                 </div>
             )}
-            <PortableText value={body} components={ptComponents} />
+            <div style={{ lineHeight: '1.8' }}>
+                <PortableText value={body} components={ptComponents} />
+            </div>
         </article>
     );
 };
