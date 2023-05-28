@@ -3,7 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
-export default function About() {
+
+//https://api.github.com/users/answebdev
+
+export default function About({ repos }) {
+    // console.log(repos);
+
     return (
         <div className={styles.container}>
             <Head>
@@ -16,9 +21,26 @@ export default function About() {
                 <h1>
                     About Page
                 </h1>
-                <div>
-                    <Link style={{ color: 'tomato' }} href={'/'}>Home</Link>
-                </div>
+
+                <h3>Check out my GitHub repos</h3>
+
+                {repos.map((repo) => {
+                    return (
+                        <div>
+                            {/* <p>{repo.name}: {repo.description}</p> */}
+                            <a style={{ color: 'tomato' }} href={repo.svn_url} target='_blank' rel='noopener noreferrer'>
+                                {repo.name}
+                            </a>
+                        </div>
+                    );
+                })}
+                {/* {articles.map((article) => {
+                    return (
+                        <div>
+                            <p>{article.title}</p>
+                        </div>
+                    );
+                })} */}
             </main>
 
             <footer className={styles.footer}>
@@ -36,3 +58,27 @@ export default function About() {
         </div>
     );
 }
+
+
+
+export const getStaticProps = async () => {
+    const res = await fetch(`https://api.github.com/users/answebdev/repos`);
+    const repos = await res.json();
+
+    return {
+        props: {
+            repos,
+        },
+    };
+};
+
+// export const getStaticProps = async () => {
+//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
+//     const articles = await res.json();
+
+//     return {
+//         props: {
+//             articles,
+//         },
+//     };
+// };

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Head from 'next/head';
 import groq from 'groq';
 import imageUrlBuilder from '@sanity/image-url';
@@ -98,6 +99,9 @@ const Post = ({ post }) => {
                 <PortableText value={body} components={ptComponents} />
             </div>
 
+            <br />
+
+            <Link style={{ color: 'tomato' }} href='/'>Home</Link>
         </article>
     );
 };
