@@ -4,12 +4,18 @@ import imageUrlBuilder from '@sanity/image-url';
 import { PortableText } from '@portabletext/react';
 import client from '../../client';
 import { Code } from '../../components/Code';
+import styles from '../../styles/Home.module.css';
 
-// const codeComponents = {
-//     types: {
-//         code: (props) => {
-//             return (<Code language={props.value.language} code={props.value.code} highlightedLines={props.value.highlightedLines} />);
-//         }
+// const serializers = {
+//     marks: {
+//         link: ({ children, mark }) =>
+//             mark.blank ? (
+//                 <a href={mark.href} target='_blank'>
+//                     {children}
+//                 </a>
+//             ) : (
+//                 <a href={mark.href}>{children}</a>
+//             )
 //     }
 // };
 
@@ -33,7 +39,18 @@ const ptComponents = {
         },
         code: (props) => {
             return (<Code language={props.value.language} code={props.value.code} highlightedLines={props.value.highlightedLines} />);
-        }
+        },
+        // marks: {
+        //     link: ({ children, mark }) => {
+        //         mark.blank ? (
+        //             <a href={mark.href} target='_blank' rel='noopener noreferrer'>
+        //                 {children}
+        //             </a>
+        //         ) : (
+        //             <a href={mark.href}>{children}</a>
+        //         );
+        //     },
+        // }
     },
 };
 
@@ -76,9 +93,11 @@ const Post = ({ post }) => {
                     />
                 </div>
             )}
-            <div style={{ lineHeight: '1.8' }}>
+
+            <div className={styles.pText}>
                 <PortableText value={body} components={ptComponents} />
             </div>
+
         </article>
     );
 };

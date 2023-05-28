@@ -114,3 +114,17 @@
     flex-direction: column;
   }
 }
+
+/* [slug].js */
+.pText {
+  line-height: 1.8;
+}
+
+.pText a {
+  color: tomato;
+}
+
+.pText a:hover {
+  color: tomato;
+  text-decoration: underline;
+}
