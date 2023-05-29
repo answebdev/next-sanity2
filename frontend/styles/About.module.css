@@ -14,6 +14,7 @@
 
 .subHeader {
   font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 40px;
 }
 
 .box {
@@ -34,13 +35,57 @@
 }
 
 .repoDescription {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
-    color:#656d76;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #656d76;
 }
 
 .repoLanguage {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 12px;
-    color:#656d76;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  color: #656d76;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  .box {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  .box {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  .box {
+    width: 100%;
+  }
 }
