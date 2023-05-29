@@ -127,13 +127,20 @@
 }
 
 /* [slug].js */
-.pText {
-  line-height: 1.8;
+.postTitle {
+  font-size: 42px;
+}
+
+.postAuthor {
+  padding: 10px 0;
+  font-size: 20px;
 }
 
 .pText {
-  padding: 4em 4em 2em 4em;
+  padding: 4em 12em 2em 12em;
   color: var(--textColor);
+  line-height: 1.8;
+  font-size: 20px;
 }
 
 .pText a {
@@ -143,6 +150,11 @@
 .pText a:hover {
   color: tomato;
   text-decoration: underline;
+}
+
+.pImage {
+  width: 75%;
+  height: auto;
 }
 
 .date {
@@ -158,6 +170,7 @@
   /* border-radius: 5px; */
   border-radius: 2em;
   font-size: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .Avatar {
@@ -166,4 +179,84 @@
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  .pText {
+    /* background-color: red; */
+    padding: 4em 8em 2em 8em;
+  }
+
+  .pImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  .pText {
+    padding: 4em 2em 2em 2em;
+  }
+
+  .pImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  .pText {
+    padding: 4em 2em 2em 2em;
+  }
+
+  .pImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  .pText {
+    padding: 4em 2em 2em 2em;
+  }
+
+  .pImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  .pText {
+    padding: 4em 2em 2em 2em;
+  }
+
+  .pImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  .pText {
+    padding: 4em 2em 2em 2em;
+  }
+
+  .pImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  .pText {
+    padding: 4em 2em 2em 2em;
+  }
+
+  .pImage {
+    width: 100%;
+    height: auto;
+  }
 }

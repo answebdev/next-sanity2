@@ -1,0 +1,46 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subHeader {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.box {
+  background-color: #ffffff;
+  border-color: #d0d7de;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 16px;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.repoLink {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: tomato;
+  font-weight: 700;
+}
+
+.repoDescription {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    color:#656d76;
+}
+
+.repoLanguage {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    color:#656d76;
+}

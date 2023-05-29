@@ -1,0 +1,20 @@
+.container {
+  padding: 4em;
+}
+
+.postContainer {
+  margin-bottom: 40px;
+}
+
+.li {
+  list-style: none;
+}
+
+.postLink {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: tomato;
+}
+
+.dateText {
+  font-family: 'Source Sans Pro', sans-serif;
+}

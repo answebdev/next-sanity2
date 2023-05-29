@@ -23,12 +23,14 @@
   font-size: 32px;
   text-align: center;
   color: #ffffff;
-  font-family: var(--headerFont);
+  /* font-family: var(--headerFont); */
+  font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.5px;
 }
 
 .HeroHeaderSpan {
   display: inline-block;
+  font-size: 42px;
 }
 
 .AvatarContainer {

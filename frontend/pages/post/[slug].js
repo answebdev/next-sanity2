@@ -33,17 +33,23 @@ const ptComponents = {
                 return null;
             }
             return (
-                // <img style={{ width: '100%', height: 'auto' }}
-                //     alt={value.alt || ' '}
-                //     loading='lazy'
-                //     // src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-                //     src={urlFor(value).fit('max').auto('format')}
-                // />
-                <img
-                    alt={value.alt || ' '}
-                    loading='lazy'
-                    src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-                />
+                <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+                    <img className={styles.pImage}
+                        alt={value.alt || ' '}
+                        loading='lazy'
+                        // src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+                        src={urlFor(value).fit('max').auto('format')}
+                    />
+                    <br />
+                </div>
+                //    <div>
+                //      <img
+                //         alt={value.alt || ' '}
+                //         loading='lazy'
+                //         src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+                //     />
+                //     <br />
+                //    </div>
             );
         },
         code: (props) => {
@@ -102,7 +108,7 @@ const Post = ({ post }) => {
             <article>
                 <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '2em', textAlign: 'center' }}>
                     <div>
-                        <h1>{title}</h1>
+                        <h1 className={styles.postTitle}>{title}</h1>
                         {categories && (
                             <div>
                                 {categories.map(
@@ -113,7 +119,7 @@ const Post = ({ post }) => {
                             </div>
                         )}
 
-                        <p style={{ padding: '10px 0' }}>By {name}</p>
+                        <p className={styles.postAuthor}>By {name}</p>
                         {authorImage && (
                             <div>
                                 <img
@@ -133,7 +139,6 @@ const Post = ({ post }) => {
                     <br />
 
                     <Link style={{ color: 'tomato' }} href='/'>Home</Link>
-
                 </div>
             </article>
         </>

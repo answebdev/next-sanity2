@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-
+import styles from '../styles/About.module.css';
 
 //https://api.github.com/users/answebdev
 
@@ -22,16 +21,16 @@ export default function About({ repos }) {
                     About Page
                 </h1>
 
-                <h3>Check out my GitHub repos</h3>
+                <h3 className={styles.subHeader}>Check out my GitHub repos</h3>
 
                 {repos.map((repo) => {
                     return (
                         <div className={styles.box}>
-                            <a style={{ color: 'tomato' }} href={repo.svn_url} target='_blank' rel='noopener noreferrer'>
+                            <a className={styles.repoLink} href={repo.svn_url} target='_blank' rel='noopener noreferrer'>
                                 {repo.name}
                             </a>
-                            <p style={{ fontSize: '14px', color: '#656d76' }}>{repo.description}</p>
-                            <p style={{ fontSize: '12px', color: '#656d76' }}>{repo.language}</p>
+                            <p className={styles.repoDescription}>{repo.description}</p>
+                            <p className={styles.repoLanguage}>{repo.language}</p>
                         </div>
                     );
                 })}

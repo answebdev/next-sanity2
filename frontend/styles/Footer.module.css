@@ -12,7 +12,8 @@
 /* ========================= */
 
 .FooterText {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
   margin-top: 5px;
   font-size: 12.5px;
