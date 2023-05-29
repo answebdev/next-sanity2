@@ -26,11 +26,12 @@ export default function About({ repos }) {
 
                 {repos.map((repo) => {
                     return (
-                        <div>
-                            {/* <p>{repo.name}: {repo.description}</p> */}
+                        <div className={styles.box}>
                             <a style={{ color: 'tomato' }} href={repo.svn_url} target='_blank' rel='noopener noreferrer'>
                                 {repo.name}
                             </a>
+                            <p style={{ fontSize: '14px', color: '#656d76' }}>{repo.description}</p>
+                            <p style={{ fontSize: '12px', color: '#656d76' }}>{repo.language}</p>
                         </div>
                     );
                 })}
@@ -62,8 +63,8 @@ export default function About({ repos }) {
 
 
 export const getStaticProps = async () => {
-    const res = await fetch('https://api.github.com/users/answebdev/repos');
-    const repos = await res.json();
+    const response = await fetch('https://api.github.com/users/answebdev/repos');
+    const repos = await response.json();
 
     return {
         props: {
