@@ -144,6 +144,10 @@
   text-decoration: underline;
 }
 
+.date {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .tagBadge {
   background-color: tomato;
   color: white;

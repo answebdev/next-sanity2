@@ -113,7 +113,7 @@ const Post = ({ post }) => {
                             </div>
                         )}
 
-                        <p>By {name}</p>
+                        <p style={{ padding: '10px 0' }}>By {name}</p>
                         {authorImage && (
                             <div>
                                 <img
@@ -127,7 +127,7 @@ const Post = ({ post }) => {
                 </div>
 
                 <div className={styles.pText}>
-                    <p style={{ color: 'rgba(0, 0, 0, 0.6);' }}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p>
+                    <p className={styles.date}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p>
                     <PortableText value={body} components={ptComponents} />
 
                     <br />
