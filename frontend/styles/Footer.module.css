@@ -1,0 +1,20 @@
+/* Sticky (But Not Fixed) Footer */
+
+.Footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #000;
+  text-align: center;
+}
+/* ========================= */
+
+.FooterText {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin-top: 5px;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+}

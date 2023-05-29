@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Styles for Sticky (But Not Fixed) Footer */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* End Styles for Sticky Footer */
+
 html,
 body {
   color: #1a2027;
@@ -12,6 +20,11 @@ body {
 
 body {
   background-color: #f4f4f4;
+  /* Need for footer: */
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
 a {

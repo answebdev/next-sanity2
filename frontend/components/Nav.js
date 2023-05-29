@@ -16,8 +16,9 @@ import navStyles from '../styles/Nav.module.css';
 
 const Nav = () => {
     return (
-        <div className='navbar'>
+        <>
             <nav className={navStyles.nav}>
+                <Link href='/'>Bacon Blog</Link>
                 <ul>
                     <li>
                         <Link href='/'>Home</Link>
@@ -27,7 +28,7 @@ const Nav = () => {
                     </li>
                 </ul>
             </nav>
-        </div>
+        </>
     );
 };
 
