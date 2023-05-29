@@ -107,7 +107,7 @@ const Post = ({ post }) => {
 
             <article>
                 <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '2em', textAlign: 'center' }}>
-                    <div>
+                    <div className={styles.postTitleBox}>
                         <h1 className={styles.postTitle}>{title}</h1>
                         {categories && (
                             <div>

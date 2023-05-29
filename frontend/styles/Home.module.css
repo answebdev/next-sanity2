@@ -184,6 +184,10 @@
 /* ===== MEDIA QUERIES ===== */
 
 @media screen and (min-width: 769px) and (max-width: 980px) {
+  .postTitleBox {
+    padding: 0 8em;
+  }
+
   .pText {
     /* background-color: red; */
     padding: 4em 8em 2em 8em;
@@ -196,6 +200,10 @@
 }
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
+  .postTitleBox {
+    padding: 0 2em;
+  }
+
   .pText {
     padding: 4em 2em 2em 2em;
   }
@@ -207,6 +215,10 @@
 }
 
 @media screen and (min-width: 551px) and (max-width: 640px) {
+  .postTitleBox {
+    padding: 0 2em;
+  }
+
   .pText {
     padding: 4em 2em 2em 2em;
   }
@@ -218,6 +230,10 @@
 }
 
 @media screen and (min-width: 471px) and (max-width: 550px) {
+  .postTitleBox {
+    padding: 0 2em;
+  }
+
   .pText {
     padding: 4em 2em 2em 2em;
   }
@@ -229,6 +245,10 @@
 }
 
 @media screen and (min-width: 431px) and (max-width: 470px) {
+  .postTitleBox {
+    padding: 0 2em;
+  }
+
   .pText {
     padding: 4em 2em 2em 2em;
   }
@@ -240,6 +260,10 @@
 }
 
 @media screen and (min-width: 401px) and (max-width: 430px) {
+  .postTitleBox {
+    padding: 0 2em;
+  }
+
   .pText {
     padding: 4em 2em 2em 2em;
   }
@@ -251,6 +275,10 @@
 }
 
 @media screen and (min-width: 100px) and (max-width: 400px) {
+  .postTitleBox {
+    padding: 0 2em;
+  }
+
   .pText {
     padding: 4em 2em 2em 2em;
   }
