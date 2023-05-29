@@ -1,0 +1,65 @@
+.HeroContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.HeroImage {
+  margin-top: -70px;
+  z-index: -10;
+  position: relative;
+  height: 500px;
+  object-fit: contain;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.HeroHeader {
+  font-size: 32px;
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--headerFont);
+  letter-spacing: 0.5px;
+}
+
+.HeroHeaderSpan {
+  display: inline-block;
+}
+
+.AvatarContainer {
+  padding: 2em 4em 0 4em;
+  color: var(--textColor);
+}
+
+.AvatarH2 {
+  text-align: center;
+  font-family: var(--headerFont);
+  letter-spacing: 0.5px;
+}
+
+.AvatarAuthorText {
+  text-align: center;
+}
+
+.MainTextContainer {
+  padding: 4em 4em 2em 4em;
+  color: var(--textColor);
+}
+
+.MainText {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.BackToBlogBtn {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--secondaryColor);
+}
+
+.BackToBlogBtn:hover {
+  color: var(--primaryColor);
+}

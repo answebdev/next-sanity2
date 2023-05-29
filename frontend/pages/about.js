@@ -62,7 +62,7 @@ export default function About({ repos }) {
 
 
 export const getStaticProps = async () => {
-    const res = await fetch(`https://api.github.com/users/answebdev/repos`);
+    const res = await fetch('https://api.github.com/users/answebdev/repos');
     const repos = await res.json();
 
     return {

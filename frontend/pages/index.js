@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import groq from 'groq';
 import client from '../client';
+import { format } from 'date-fns';
 import imageUrlBuilder from '@sanity/image-url';
 import Nav from '../components/Nav';
 
@@ -37,13 +38,15 @@ const Index = ({ posts }) => {
               <div key={_id} style={{ marginBottom: '40px' }}>
                 <li style={{ listStyle: 'none' }}>
                   <Link style={{ color: 'tomato' }} href={`/post/${encodeURIComponent(slug.current)}`}>
-                    {title}
+                    {title},
                   </Link>{' '}
-                  ({new Date(publishedAt).toDateString()})
+                  {/* ({new Date(publishedAt).toDateString()}) */}
+                  {format(new Date(publishedAt), 'MMMM dd, yyyy')}
                 </li>
                 <br />
                 <img
-                  src={urlFor(mainImage).width(300).url()}
+                  // src={urlFor(mainImage).width(300).url()}
+                  src={urlFor(mainImage).width(320).height(240).fit('max').auto('format')}
                   alt={`${mainImage}`}
                 />
 

@@ -120,6 +120,11 @@
   line-height: 1.8;
 }
 
+.pText {
+  padding: 4em 4em 2em 4em;
+  color: var(--textColor);
+}
+
 .pText a {
   color: tomato;
 }
@@ -127,4 +132,22 @@
 .pText a:hover {
   color: tomato;
   text-decoration: underline;
+}
+
+.tagBadge {
+  background-color: tomato;
+  color: white;
+  padding: 4px 8px;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.Avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
