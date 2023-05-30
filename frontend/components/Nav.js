@@ -18,7 +18,8 @@ const Nav = () => {
     return (
         <>
             <nav className={navStyles.nav}>
-                <Link href='/'>Bacon Blog</Link>
+                {/* <Link href='/'>npm start blog</Link> */}
+                <Link href='/'><span className={navStyles.brand}>Bacon Blog</span></Link>
                 <ul>
                     <li>
                         <Link href='/'>Home</Link>

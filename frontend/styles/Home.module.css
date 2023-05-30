@@ -153,9 +153,15 @@
 }
 
 .pImage {
-  /* width: 75%; */
-  width: 100%;
+  width: 80%;
+  /* width: 100%; */
   height: auto;
+}
+
+.captionText {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
 }
 
 .date {

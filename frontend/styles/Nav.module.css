@@ -1,3 +1,9 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap'); */
+
+.brand {
+  font-size: 20px;
+}
+
 .nav {
   height: 60px;
   padding: 10px 40px;
@@ -10,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Fira Code', monospace; */
 }
 
 .nav ul {
