@@ -47,7 +47,7 @@ const Index = ({ posts }) => {
                   <img style={{ marginBottom: '5px' }}
                     // src={urlFor(mainImage).width(300).url()}
                     src={urlFor(mainImage).width(320).height(240).fit('max').auto('format')}
-                    alt={`${mainImage}`}
+                    alt={`${title}`}
                   />
 
                   <li className={styles.li}>
