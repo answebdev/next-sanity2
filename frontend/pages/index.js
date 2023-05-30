@@ -11,6 +11,8 @@ import styles from '../styles/Index.module.css';
 
 // Create search component (video at 1:16:30 - note video is for Next.js 13): https://www.youtube.com/watch?v=Y6KDk5iyrYE
 // Search by tag/catgeory: https://github.com/answebdev/sanity_portfolio/blob/main/src/container/Work/Work.jsx
+// Next.js Image component: https://nextjs.org/docs/pages/api-reference/components/image
+// Next.js Image Component Overview: https://www.axelerant.com/blog/overview-nextjs-image-component-and-its-powerful-capabilities
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
@@ -36,10 +38,6 @@ const Index = ({ posts }) => {
               <div key={_id} className={styles.postContainer}>
                 <div className={styles.box}>
                   <li className={styles.li}>
-                    {/* <Link className={styles.postLink} href={`/post/${encodeURIComponent(slug.current)}`}>
-                      {title}
-                    </Link><br /> */}
-                    {/* ({new Date(publishedAt).toDateString()}) */}
                   </li>
                   <li className={styles.li}><span className={styles.postTitle}>{title}</span></li>
                   <li className={styles.li}><span className={styles.dateText}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</span></li>
