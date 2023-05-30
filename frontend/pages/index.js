@@ -25,35 +25,44 @@ const Index = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Bacon Blog</h1>
+      <h1 style={{ textAlign: 'center' }}>Bacon Blog</h1>
+
+      <br />
 
       {posts.length > 0 &&
         posts.map(
           ({ _id, title = '', slug = '', publishedAt = '', mainImage = '' }) =>
             slug && (
               <div key={_id} className={styles.postContainer}>
-                <li className={styles.li}>
-                  <Link className={styles.postLink} href={`/post/${encodeURIComponent(slug.current)}`}>
-                    {title}
-                  </Link>{' '}·{' '}
-                  {/* ({new Date(publishedAt).toDateString()}) */}
-                  <span className={styles.dateText}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</span>
-                </li>
-                <br />
-                <img
-                  // src={urlFor(mainImage).width(300).url()}
-                  src={urlFor(mainImage).width(320).height(240).fit('max').auto('format')}
-                  alt={`${mainImage}`}
-                />
+                <div className={styles.box}>
+                  <li className={styles.li}>
+                    {/* <Link className={styles.postLink} href={`/post/${encodeURIComponent(slug.current)}`}>
+                      {title}
+                    </Link><br /> */}
+                    {/* ({new Date(publishedAt).toDateString()}) */}
+                  </li>
+                  <li className={styles.li}><span className={styles.postTitle}>{title}</span></li>
+                  <li className={styles.li}><span className={styles.dateText}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</span></li>
+                  <br />
+                  <img style={{ marginBottom: '5px' }}
+                    // src={urlFor(mainImage).width(300).url()}
+                    src={urlFor(mainImage).width(320).height(240).fit('max').auto('format')}
+                    alt={`${mainImage}`}
+                  />
 
-                {/* <Image
+                  <li className={styles.li}>
+                    <Link className={styles.postLink} href={`/post/${encodeURIComponent(slug.current)}`}>
+                      View Post
+                    </Link>
+                  </li>
+                  {/* <Image
                   src={urlFor(mainImage).width(300).url()}
                   alt={`${mainImage}`}
                   width={350}
                   height={250}
                 /> */}
 
-
+                </div>
               </div>
             )
         )}
