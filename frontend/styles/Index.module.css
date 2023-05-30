@@ -28,6 +28,12 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.mainImage {
+  margin-bottom: 5px;
+  width: 320px;
+  height: 240px;
+  object-fit: cover;
+}
 /* ========================================================================== */
 .box {
   background-color: #ffffff;

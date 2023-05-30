@@ -44,24 +44,15 @@ const Index = ({ posts }) => {
                   <li className={styles.li}><span className={styles.postTitle}>{title}</span></li>
                   <li className={styles.li}><span className={styles.dateText}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</span></li>
                   <br />
-                  <img style={{ marginBottom: '5px' }}
-                    // src={urlFor(mainImage).width(300).url()}
-                    src={urlFor(mainImage).width(320).height(240).fit('max').auto('format')}
+                  <img className={styles.mainImage}
+                    src={urlFor(mainImage).url()}
                     alt={`${title}`}
                   />
-
                   <li className={styles.li}>
                     <Link className={styles.postLink} href={`/post/${encodeURIComponent(slug.current)}`}>
                       View Post
                     </Link>
                   </li>
-                  {/* <Image
-                  src={urlFor(mainImage).width(300).url()}
-                  alt={`${mainImage}`}
-                  width={350}
-                  height={250}
-                /> */}
-
                 </div>
               </div>
             )
