@@ -10,6 +10,7 @@ import styles from '../../styles/Home.module.css';
 import classes from '../../styles/OnePost.module.css';
 
 // Adding Image Caption and Attribution to API.js: https://www.sanity.io/answers/adding-image-caption-and-attribution-to-api-js
+// Internal and external links with Portable Text: https://www.sanity.io/guides/portable-text-internal-and-external-links
 
 // const serializers = {
 //     marks: {
