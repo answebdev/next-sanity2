@@ -8,14 +8,19 @@
   margin-bottom: 40px;
 }
 
-.li {
-  list-style: none;
+.text {
+  /* padding: 3px; */
+  margin: 0 0;
 }
 
 .postTitle {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
   font-weight: 700;
+}
+
+.postDescription {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .postLink {
@@ -26,12 +31,13 @@
 
 .dateText {
   font-family: 'Source Sans Pro', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .mainImage {
-  margin-bottom: 5px;
-  width: 320px;
-  height: 240px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 /* ========================================================================== */
@@ -42,4 +48,49 @@
   border-style: solid;
   border-width: 1px;
   padding: 16px;
+  width: 35%;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  .box {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  .box {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  .box {
+    width: 100%;
+  }
 }

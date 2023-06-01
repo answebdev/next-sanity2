@@ -79,6 +79,7 @@ const Post = ({ post }) => {
     const {
         title = 'Missing title',
         name = 'Missing name',
+        description,
         categories,
         authorImage,
         mainImage,
@@ -140,6 +141,7 @@ const Post = ({ post }) => {
 
                 <div className={styles.pText}>
                     <p className={styles.date}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p>
+                    <p><em>{description}</em></p>
                     <PortableText value={body} components={ptComponents} />
 
                     <br />
@@ -153,6 +155,7 @@ const Post = ({ post }) => {
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]{
   title,
+  description,
   publishedAt,
   mainImage,
   caption,
