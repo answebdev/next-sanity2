@@ -2,7 +2,7 @@ import React from 'react';
 
 const contact = () => {
     return (
-        <div>Contact Page</div>
+        <div style={{ padding: '8em' }}>Contact Page</div>
     );
 };
 

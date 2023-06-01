@@ -1,6 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+.Navbar {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.Navbar .Ul {
+  display: flex;
+}
+
+.Ul {
+  margin-right: 16px;
+}
+
+.Navbar li {
+  list-style: none;
+}
+
+.NavbarTitle {
+  margin-right: auto;
+  font-size: 125%;
+  padding: 12px 16px;
+}
+
+.NavbarItem {
+  padding: 6px 16px;
+  vertical-align: middle;
+}
+
+.BrandLink,
+.NavLink {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* .NavLink {
+  margin-right: 16px;
+} */
+
+.NavLink:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 981px) and (max-width: 1200px) {
+  /* body {
+      background-color: red;
+    } */
+}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  /* body {
+      background-color: yellow;
+    } */
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  /* body {
+      background-color: steelblue;
+    } */
+
+  .Navbar {
+    display: block;
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
+
+  .Navbar .Ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  /* body {
+      background-color: brown;
+    } */
+
+  .Navbar {
+    display: block;
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
+
+  .Navbar .Ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  /* body {
+      background-color: salmon;
+    } */
+
+  .Navbar {
+    display: block;
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
+
+  .Navbar .Ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  /* body {
+      background-color: black;
+    } */
+
+  .Navbar {
+    display: block;
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
+
+  .Navbar .Ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  /* body {
+      background-color: burlywood;
+    } */
+
+  .Navbar {
+    display: block;
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
+
+  .Navbar .Ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  /* body {
+      background-color: pink;
+    } */
+
+  .Navbar {
+    display: block;
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
+
+  .Navbar .Ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 /* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap'); */
 
-.brand {
+/* .brand {
   font-size: 20px;
 }
 
@@ -9,14 +203,10 @@
   padding: 10px 40px;
   background: #000;
   color: #fff;
-  /* display: flex;
-  align-items: center;
-  justify-content: flex-end; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
-  /* font-family: 'Fira Code', monospace; */
 }
 
 .nav ul {
@@ -28,6 +218,6 @@
 
 .nav ul li a {
   margin: 5px 15px;
-}
+} */
 
 /* Source: https://github.com/bradtraversy/next-crash-course */

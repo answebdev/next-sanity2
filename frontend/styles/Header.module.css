@@ -1,0 +1,16 @@
+/* Header/Logo Title */
+.header {
+  margin: 0;
+  padding: 60px;
+  text-align: center;
+  background: #282c34;
+  background: #20232a;
+  background: steelblue;
+  /* background: url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+  color: white;
+  font-size: 30px;
+}
+
+.headerText {
+  font-family: 'Source Sans Pro', sans-serif;
+}
