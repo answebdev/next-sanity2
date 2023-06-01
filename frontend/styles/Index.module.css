@@ -10,7 +10,7 @@
 
 .text {
   /* padding: 3px; */
-  margin: 0 0;
+  margin: 5px 0;
 }
 
 .postTitle {
@@ -32,6 +32,7 @@
 .dateText {
   font-family: 'Source Sans Pro', sans-serif;
   color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
 }
 
 .mainImage {
@@ -40,7 +41,7 @@
   height: auto;
   object-fit: cover;
 }
-/* ========================================================================== */
+
 .box {
   background-color: #ffffff;
   border-color: #d0d7de;
@@ -48,6 +49,7 @@
   border-style: solid;
   border-width: 1px;
   padding: 16px;
+  padding-top: 0;
   width: 35%;
 }
 

@@ -39,8 +39,7 @@ const Index = ({ posts }) => {
               <div key={_id} className={styles.postContainer}>
                 <div className={styles.box}>
                   <p className={styles.text}></p>
-                  <p className={styles.text}><span className={styles.postTitle}>{title}</span></p>
-                  <p className={styles.text}><span className={styles.dateText}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</span></p>
+
                   {/* <p className={styles.text}><span className={styles.postDescription}>{description}</span></p> */}
                   <br />
                   <img className={styles.mainImage}
@@ -48,6 +47,8 @@ const Index = ({ posts }) => {
                     alt={`${title}`}
                   />
                   {/* <p className={styles.text}> */}
+                  <p className={styles.text}><span className={styles.postTitle}>{title}</span></p>
+                  <p className={styles.text}><span className={styles.dateText}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</span></p>
                   <p className={styles.text}><span className={styles.postDescription}>{description}</span></p><br />
                   <Link className={styles.postLink} href={`/post/${encodeURIComponent(slug.current)}`}>
                     View Post
