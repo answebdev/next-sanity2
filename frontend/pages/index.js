@@ -75,14 +75,14 @@ const Index = () => {
               <p className={styles.text}><span className={styles.postTitle}>{p.title}</span></p>
               <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
               <p className={styles.text}><span className={styles.postDescription}>{p.description}</span></p><br />
-              <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
-                View Post
-              </Link>
-              <div>
+              <div className={styles.badgeDiv}>
                 {p.categories.map((category, i) => (
-                  <p key={i}>{category}</p>
+                  <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
                 ))}
               </div>
+              <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                Read More
+              </Link>
             </div>
           </div>
         ))}

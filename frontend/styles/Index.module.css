@@ -53,6 +53,24 @@
   width: 35%;
 }
 
+.badgeDiv {
+  margin-bottom: 20px;
+}
+
+.tagBadge {
+  display: inline-block;
+  /* background-color: tomato; */
+  background-color: #f2f2f2;
+  /* color: white; */
+  color: #292929;
+  padding: 4px 8px;
+  margin: 0 5px 0 0;
+  text-align: center;
+  border-radius: 2em;
+  font-size: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 /* ===== MEDIA QUERIES ===== */
 
 @media screen and (min-width: 769px) and (max-width: 980px) {
