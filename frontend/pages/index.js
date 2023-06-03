@@ -30,6 +30,7 @@ const Index = () => {
           title,
           slug,
           body,
+          description,
           author,
           mainImage {
               asset -> {
