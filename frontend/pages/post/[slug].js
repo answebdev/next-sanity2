@@ -37,15 +37,28 @@ const ptComponents = {
             }
             return (
                 <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+
+                    {/* Fancybox - styles in global.css */}
+                    {/* <figure>
+                        <a href={urlFor(value).fit('max').auto('format')} data-fancybox="single" data-caption={value.caption}>
+                            <img className={styles.pImage}
+                                alt={value.alt || ' '}
+                                loading='lazy'
+                                src={urlFor(value).fit('max').auto('format')}
+                            />
+                        </a>
+                        <figcaption className={styles.captionText}>{value.caption}</figcaption>
+                    </figure> */}
+
                     <figure>
                         <img className={styles.pImage}
                             alt={value.alt || ' '}
                             loading='lazy'
-                            // src={urlFor(value).width(320).height(240).fit('max').auto('format')}
                             src={urlFor(value).fit('max').auto('format')}
                         />
                         <figcaption className={styles.captionText}>{value.caption}</figcaption>
                     </figure>
+
                     <br />
                 </div>
                 //    <div>
@@ -119,8 +132,8 @@ const Post = ({ post }) => {
                         {categories && (
                             <div>
                                 {categories.map(
-                                    (category) => (
-                                        <span className={styles.tagBadge}>{category}</span>
+                                    (category, index) => (
+                                        <span key={index} className={styles.tagBadge}>{category}</span>
                                     )
                                 )}
                             </div>

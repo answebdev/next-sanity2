@@ -23,9 +23,9 @@ export default function About({ repos }) {
 
                 <h3 className={styles.subHeader}>Check out my GitHub repos</h3>
 
-                {repos.map((repo) => {
+                {repos.map((repo, i) => {
                     return (
-                        <div className={styles.box}>
+                        <div key={i} className={styles.box}>
                             <a className={styles.repoLink} href={repo.svn_url} target='_blank' rel='noopener noreferrer'>
                                 {repo.name}
                             </a>

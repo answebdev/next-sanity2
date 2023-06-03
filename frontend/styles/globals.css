@@ -44,6 +44,36 @@ a {
   text-decoration: none;
 }
 
-* {
+/* Fancybox - from [slug].js */
+
+/* * {
   box-sizing: border-box;
 }
+
+button.carousel__button.is-next,
+button.carousel__button.is-prev {
+  position: fixed;
+  top: 0;
+}
+
+.carousel__viewport,
+button.carousel__button.is-next,
+button.carousel__button.is-prev,
+div.fancybox__counter,
+button.carousel__button.fancybox__button--zoom,
+.carousel__button.fancybox__button--slideshow,
+.carousel__button.fancybox__button--fullscreen,
+.carousel__button.fancybox__button--thumbs {
+  display: none !important;
+}
+
+.Home_pImage__unofO:hover {
+  text-decoration: none;
+  cursor: -moz-zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.fancybox__caption {
+  font-family: 'Source Sans Pro', sans-serif;
+} */
