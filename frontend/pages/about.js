@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
 import styles from '../styles/About.module.css';
 
-//https://api.github.com/users/answebdev
+// https://api.github.com/users/answebdev
 
 export default function About({ repos }) {
     // console.log(repos);
@@ -45,8 +43,6 @@ export default function About({ repos }) {
         </div>
     );
 }
-
-
 
 export const getStaticProps = async () => {
     const response = await fetch('https://api.github.com/users/answebdev/repos');

@@ -1,6 +1,6 @@
 /* Sticky (But Not Fixed) Footer */
 
-.Footer {
+.footer {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -12,7 +12,7 @@
 }
 /* ========================= */
 
-.FooterText {
+.footerText {
   /* font-family: 'Poppins', sans-serif; */
   font-family: 'Source Sans Pro', sans-serif;
   color: #fff;

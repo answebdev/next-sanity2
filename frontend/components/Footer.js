@@ -1,9 +1,9 @@
-import classes from '../styles/Footer.module.css';
+import styles from '../styles/Footer.module.css';
 
 const Footer = () => (
     <div className='footer'>
-        <div className={classes.Footer}>
-            <span className={classes.FooterText}>
+        <div className={styles.footer}>
+            <span className={styles.footerText}>
                 &copy; Copyright {new Date().getFullYear()} Bacon Blog
             </span>
         </div>

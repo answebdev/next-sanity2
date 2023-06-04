@@ -6,8 +6,7 @@ import { PortableText } from '@portabletext/react';
 import client from '../../client';
 import { Code } from '../../components/Code';
 import { format } from 'date-fns';
-import styles from '../../styles/Home.module.css';
-import classes from '../../styles/OnePost.module.css';
+import styles from '../../styles/Post.module.css';
 
 // Adding Image Caption and Attribution to API.js: https://www.sanity.io/answers/adding-image-caption-and-attribution-to-api-js
 // Internal and external links with Portable Text: https://www.sanity.io/guides/portable-text-internal-and-external-links
@@ -53,7 +52,7 @@ const ptComponents = {
                     <figure>
                         <img className={styles.pImage}
                             alt={value.alt || ' '}
-                            loading='lazy'
+                            // loading='lazy'
                             src={urlFor(value).fit('max').auto('format')}
                         />
                         <figcaption className={styles.captionText}>{value.caption}</figcaption>
@@ -111,16 +110,16 @@ const Post = ({ post }) => {
             </Head>
 
             <div
-                className={classes.HeroImage}
+                className={styles.heroImage}
                 style={{
                     backgroundImage: `linear-gradient( 0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${urlFor(
                         mainImage
                     ).url()})`,
                 }}
             >
-                <div className={classes.HeroContainer}>
-                    <h1 className={classes.HeroHeader}>
-                        <span className={classes.HeroHeaderSpan}>{title}</span>
+                <div className={styles.heroContainer}>
+                    <h1 className={styles.heroHeader}>
+                        <span className={styles.heroHeaderSpan}>{title}</span>
                     </h1>
                 </div>
             </div>
@@ -143,7 +142,7 @@ const Post = ({ post }) => {
                         {authorImage && (
                             <div>
                                 <img
-                                    className={styles.Avatar}
+                                    className={styles.avatar}
                                     src={urlFor(authorImage).width(300).url()}
                                     alt={`${name}`}
                                 />

@@ -1,8 +1,8 @@
-.container {
+/* .container {
   padding: 0 2rem;
-}
+} */
 
-.main {
+/* .main {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -10,25 +10,56 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+} */
+
+.heroContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.footer {
+.heroImage {
+  z-index: -10;
+  position: relative;
+  height: 450px;
+  object-fit: contain;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroHeader {
+  font-size: 32px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.heroHeaderSpan {
+  display: inline-block;
+  font-size: 42px;
+}
+
+/* .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.footer a {
+/* .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
+} */
 
-.title a {
+/* .title a {
   color: #0070f3;
   text-decoration: none;
 }
@@ -43,9 +74,9 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
-}
+} */
 
-.title,
+/* .title,
 .description {
   text-align: center;
 }
@@ -54,26 +85,26 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
-}
+} */
 
-.code {
+/* .code {
   background: #fafafa;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
+} */
 
-.grid {
+/* .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
-}
+} */
 
-.card {
+/* .card {
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -101,14 +132,14 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
+} */
 
-.logo {
+/* .logo {
   height: 1em;
   margin-left: 0.5rem;
-}
+} */
 
-.box {
+/* .box {
   background-color: #ffffff;
   border-color: #d0d7de;
   border-radius: 6px;
@@ -117,16 +148,8 @@
   padding: 16px;
   width: 50%;
   margin-bottom: 20px;
-}
+} */
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-/* [slug].js */
 .postTitle {
   font-size: 42px;
 }
@@ -180,7 +203,7 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.Avatar {
+.avatar {
   vertical-align: middle;
   width: 100px;
   height: 100px;

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 
-.Navbar {
+.navbar {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -11,31 +11,31 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.Navbar .Ul {
+.navbar .ulElement {
   display: flex;
 }
 
-.Ul {
+.ulElement {
   margin-right: 16px;
 }
 
-.Navbar li {
+.navbar li {
   list-style: none;
 }
 
-.NavbarTitle {
+.navbarTitle {
   margin-right: auto;
   font-size: 125%;
   padding: 12px 16px;
 }
 
-.NavbarItem {
+.navbarItem {
   padding: 6px 16px;
   vertical-align: middle;
 }
 
-.BrandLink,
-.NavLink {
+.brandLink,
+.navLink {
   color: #ffffff;
   text-decoration: none;
 }
@@ -44,7 +44,7 @@
   margin-right: 16px;
 } */
 
-.NavLink:hover {
+.navLink:hover {
   border-bottom: 2px solid #ffffff;
 }
 
@@ -67,18 +67,18 @@
       background-color: steelblue;
     } */
 
-  .Navbar {
+  .navbar {
     display: block;
     text-align: center;
     padding: 10px 0 20px 0;
   }
 
-  .Navbar .Ul {
+  .navbar .ulElement {
     text-align: center;
     justify-content: center;
   }
 
-  .Ul {
+  .ulElement {
     margin: 0;
     padding: 0;
   }
@@ -89,18 +89,18 @@
       background-color: brown;
     } */
 
-  .Navbar {
+  .navbar {
     display: block;
     text-align: center;
     padding: 10px 0 20px 0;
   }
 
-  .Navbar .Ul {
+  .navbar .ulElement {
     text-align: center;
     justify-content: center;
   }
 
-  .Ul {
+  .ulElement {
     margin: 0;
     padding: 0;
   }
@@ -111,18 +111,18 @@
       background-color: salmon;
     } */
 
-  .Navbar {
+  .navbar {
     display: block;
     text-align: center;
     padding: 10px 0 20px 0;
   }
 
-  .Navbar .Ul {
+  .navbar .ulElement {
     text-align: center;
     justify-content: center;
   }
 
-  .Ul {
+  .ulElement {
     margin: 0;
     padding: 0;
   }
@@ -133,18 +133,18 @@
       background-color: black;
     } */
 
-  .Navbar {
+  .navbar {
     display: block;
     text-align: center;
     padding: 10px 0 20px 0;
   }
 
-  .Navbar .Ul {
+  .navbar .ulElement {
     text-align: center;
     justify-content: center;
   }
 
-  .Ul {
+  .ulElement {
     margin: 0;
     padding: 0;
   }
@@ -155,18 +155,18 @@
       background-color: burlywood;
     } */
 
-  .Navbar {
+  .navbar {
     display: block;
     text-align: center;
     padding: 10px 0 20px 0;
   }
 
-  .Navbar .Ul {
+  .navbar .ulElement {
     text-align: center;
     justify-content: center;
   }
 
-  .Ul {
+  .ulElement {
     margin: 0;
     padding: 0;
   }
@@ -177,18 +177,18 @@
       background-color: pink;
     } */
 
-  .Navbar {
+  .navbar {
     display: block;
     text-align: center;
     padding: 10px 0 20px 0;
   }
 
-  .Navbar .Ul {
+  .navbar .ulElement {
     text-align: center;
     justify-content: center;
   }
 
-  .Ul {
+  .ulElement {
     margin: 0;
     padding: 0;
   }

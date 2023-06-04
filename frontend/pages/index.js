@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import Head from 'next/head';
 import Link from 'next/link';
-import groq from 'groq';
+// import groq from 'groq';
 import client from '../client';
 import { format } from 'date-fns';
 import imageUrlBuilder from '@sanity/image-url';
-import styles from '../styles/Index.module.css';
 import Header from '../components/Header';
+import styles from '../styles/Index.module.css';
 
 // Live Site: https://bacon-blog.vercel.app/
 // Deployed Studio: https://bacon-blog.sanity.studio/desk
@@ -16,6 +16,15 @@ import Header from '../components/Header';
 // Next.js Image component: https://nextjs.org/docs/pages/api-reference/components/image
 // Next.js Image Component Overview: https://www.axelerant.com/blog/overview-nextjs-image-component-and-its-powerful-capabilities
 // Buy Me a Coffee: https://www.buymeacoffee.com/
+
+// DARK THEME
+// For Dark Theme, try using NexUI: https://nextui.org/docs/theme/dark-mode
+// Install 2 dependencies:
+// npm i @nextui-org/react
+// npm i next-themes
+// Then, go here: https://nextui.org/docs/theme/dark-mode#using-next-themes
+// Add the code in Steps 1-3 in '_app.js'; add Step for in 'Nav.js'. That's it.
+// Note: this messes up the CSS, so I need to figure this out.
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
@@ -75,7 +84,7 @@ const Index = () => {
               <p className={styles.text}><span className={styles.postTitle}>{p.title}</span></p>
               <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
               <p className={styles.text}><span className={styles.postDescription}>{p.description}</span></p><br />
-              <div className={styles.badgeDiv}>
+              <div className={styles.badgeContainer}>
                 {p.categories.map((category, i) => (
                   <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
                 ))}

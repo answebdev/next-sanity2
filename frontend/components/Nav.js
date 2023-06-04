@@ -43,27 +43,28 @@
 
 
 import Link from 'next/link';
-import classes from '../styles/Nav.module.css';
+// import classes from '../styles/Nav.module.css';
+import styles from '../styles/Nav.module.css';
 
 const Navbar = () => (
-    <header className={classes.Navbar}>
-        <div className={`${classes.NavbarTitle} ${classes.NavbarItem}`}>
+    <header className={styles.navbar}>
+        <div className={`${styles.navbarTitle} ${styles.navbarItem}`}>
             <div>
                 {/* <span>Bacon Blog</span> */}
-                <li className={classes.NavbarItem}>
-                    <Link className={classes.BrandLink} href='/'>Bacon Blog</Link>
+                <li className={styles.navbarItem}>
+                    <Link className={styles.brandLink} href='/'>Bacon Blog</Link>
                 </li>
             </div>
         </div>
-        <ul className={classes.Ul}>
-            <li className={classes.NavbarItem}>
-                <Link className={classes.NavLink} href='/'>Home</Link>
+        <ul className={styles.ulElement}>
+            <li className={styles.navbarItem}>
+                <Link className={styles.navLink} href='/'>Home</Link>
             </li>
-            <li className={classes.NavbarItem}>
-                <Link className={classes.NavLink} href='/about'>About</Link>
+            <li className={styles.navbarItem}>
+                <Link className={styles.navLink} href='/about'>About</Link>
             </li>
-            <li className={classes.NavbarItem}>
-                <Link className={classes.NavLink} href='/contact'>Contact</Link>
+            <li className={styles.navbarItem}>
+                <Link className={styles.navLink} href='/contact'>Contact</Link>
             </li>
         </ul>
     </header>
