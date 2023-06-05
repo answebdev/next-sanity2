@@ -25,6 +25,9 @@ import styles from '../styles/Index.module.css';
 // Then, go here: https://nextui.org/docs/theme/dark-mode#using-next-themes
 // Add the code in Steps 1-3 in '_app.js'; add Step for in 'Nav.js'. That's it.
 // Note: this messes up the CSS, so I need to figure this out.
+// Override Styles: https://nextui.org/docs/theme/override-styles
+
+// Next.js: How to show the default 404 page: https://maxschmitt.me/posts/next-js-default-404-page
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
