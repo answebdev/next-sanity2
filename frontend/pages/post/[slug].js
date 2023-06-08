@@ -11,19 +11,6 @@ import styles from '../../styles/Post.module.css';
 // Adding Image Caption and Attribution to API.js: https://www.sanity.io/answers/adding-image-caption-and-attribution-to-api-js
 // Internal and external links with Portable Text: https://www.sanity.io/guides/portable-text-internal-and-external-links
 
-// const serializers = {
-//     marks: {
-//         link: ({ children, mark }) =>
-//             mark.blank ? (
-//                 <a href={mark.href} target='_blank'>
-//                     {children}
-//                 </a>
-//             ) : (
-//                 <a href={mark.href}>{children}</a>
-//             )
-//     }
-// };
-
 function urlFor(source) {
     return imageUrlBuilder(client).image(source);
 }
