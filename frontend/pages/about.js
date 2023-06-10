@@ -32,13 +32,6 @@ export default function About({ repos }) {
                         </div>
                     );
                 })}
-                {/* {articles.map((article) => {
-                    return (
-                        <div>
-                            <p>{article.title}</p>
-                        </div>
-                    );
-                })} */}
             </main>
         </div>
     );
