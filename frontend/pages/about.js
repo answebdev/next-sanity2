@@ -1,60 +1,33 @@
 import Head from 'next/head';
 import styles from '../styles/About.module.css';
 
-// https://api.github.com/users/answebdev
+const about = () => {
 
-export default function About({ repos }) {
-    // console.log(repos);
+    const titleTag = `CoderGuides | About`;
 
     return (
-        <div className={styles.container}>
+        <>
             <Head>
-                <title>Bacon Blog | About</title>
+                <title>{titleTag}</title>
                 <meta name="description" content="A blog of random content" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
-                <h1>
-                    About Page
-                </h1>
+            <article>
+                <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4em', textAlign: 'center' }}>
+                    <div className={styles.headerBox}>
+                        <h1 className={styles.pageHeader}>
+                            About Page
+                        </h1>
+                    </div>
+                </div>
 
-                <h3 className={styles.subHeader}>Check out my GitHub repos</h3>
-
-                {repos.map((repo, i) => {
-                    return (
-                        <div key={i} className={styles.box}>
-                            <a className={styles.repoLink} href={repo.svn_url} target='_blank' rel='noopener noreferrer'>
-                                {repo.name}
-                            </a>
-                            <p className={styles.repoDescription}>{repo.description}</p>
-                            <p className={styles.repoLanguage}>{repo.language}</p>
-                        </div>
-                    );
-                })}
-            </main>
-        </div>
+                <div className={styles.pText}>
+                    Content goes here
+                </div>
+            </article>
+        </>
     );
-}
-
-export const getStaticProps = async () => {
-    const response = await fetch('https://api.github.com/users/answebdev/repos');
-    const repos = await response.json();
-
-    return {
-        props: {
-            repos,
-        },
-    };
 };
 
-// export const getStaticProps = async () => {
-//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
-//     const articles = await res.json();
-
-//     return {
-//         props: {
-//             articles,
-//         },
-//     };
-// };
+export default about;

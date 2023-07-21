@@ -4,7 +4,7 @@ const Footer = () => (
     <div className='footer'>
         <div className={styles.footer}>
             <span className={styles.footerText}>
-                &copy; Copyright {new Date().getFullYear()} Bacon Blog
+                &copy; Copyright {new Date().getFullYear()} CoderGuides
             </span>
         </div>
     </div>

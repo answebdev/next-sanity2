@@ -1,4 +1,4 @@
-/* Header/Logo Title */
+/* Header Logo Title */
 .header {
   margin: 0;
   padding: 60px;
@@ -14,4 +14,27 @@
 
 .headerText {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* MEDIA QUERIES */
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries */
+/* Make the padding 4em if the viewport is 980 pixels or narrower: */
+@media screen and (max-width: 550px) {
+  .h1 {
+    font-size: 45px;
+  }
+
+  .headerText {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .h1 {
+    font-size: 25px;
+  }
+
+  .headerText {
+    font-size: 22px;
+  }
 }

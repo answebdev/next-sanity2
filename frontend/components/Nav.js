@@ -52,7 +52,7 @@ const Navbar = () => (
             <div>
                 {/* <span>Bacon Blog</span> */}
                 <li className={styles.navbarItem}>
-                    <Link className={styles.brandLink} href='/'>Bacon Blog</Link>
+                    <Link className={styles.brandLink} href='/'>CoderGuides</Link>
                 </li>
             </div>
         </div>

@@ -67,16 +67,50 @@ const Index = () => {
       <Header />
       <div className={styles.container}>
         <Head>
-          <title>Bacon Blog</title>
+          <title>CoderGuides</title>
           <meta name="description" content="A blog of random content" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <h1 style={{ textAlign: 'center' }}>Bacon Blog</h1>
+        <h1 className={styles.pageHeader}>Welcome to CoderGuides</h1>
 
         <br />
 
         {posts.map((p, i) => (
+          <div key={i} className={styles.postContainer}>
+            <div className={styles.card}>
+              <div className={styles.card_body}>
+                <div className={styles.card_title}>
+                  <img className={styles.mainImage}
+                    src={urlFor(p.mainImage).url()}
+                    alt={`${p.title}`}
+                  />
+                  <strong>{p.title}</strong>
+                </div>
+                <div className={styles.card_text}>
+                  <p>
+                    {p.description}
+                  </p>
+                </div>
+                <div className={styles.badgeContainer}>
+                  {p.categories.map((category, i) => (
+                    <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
+                  ))}
+                </div>
+                <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                  Read More
+                </Link>
+              </div>
+              <div className={styles.card_footer}>
+                <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
+              </div>
+            </div>
+          </div>
+        ))}
+
+
+        {/* ORIGINAL CARD */}
+        {/* {posts.map((p, i) => (
           <div key={i} className={styles.postContainer}>
             <div className={styles.box}>
               <br />
@@ -97,7 +131,8 @@ const Index = () => {
               </Link>
             </div>
           </div>
-        ))}
+        ))} */}
+
       </div >
     </div>
   );

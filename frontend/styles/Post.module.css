@@ -160,7 +160,7 @@
 }
 
 .pText {
-  padding: 4em 12em 2em 12em;
+  padding: 4em 12em;
   color: var(--textColor);
   line-height: 1.8;
   font-size: 20px;
@@ -173,6 +173,29 @@
 .pText a:hover {
   color: tomato;
   text-decoration: underline;
+}
+
+.description {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  /* font-size: 18px; */
+}
+
+/* Separator: https://stackoverflow.com/questions/46907903/three-dots-below-block-element */
+.separator {
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  color: #1a2027;
+  margin-bottom: 30px;
+}
+
+.separator::after {
+  content: '...';
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  letter-spacing: 20px;
 }
 
 .pImage {
@@ -189,12 +212,14 @@
 
 .date {
   color: rgba(0, 0, 0, 0.6);
+  /* font-size: 18px; */
 }
 
 .tagBadge {
   background-color: tomato;
   color: white;
-  padding: 4px 8px;
+  /* padding: 4px 8px; */
+  padding: 6px 10px;
   margin: 0 5px;
   text-align: center;
   /* border-radius: 5px; */

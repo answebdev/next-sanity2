@@ -7,7 +7,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Title (40 and 50 characters)',
       type: 'string',
     }),
     defineField({
@@ -21,7 +21,7 @@ export default defineType({
     }),
     defineField({
       name: 'description',
-      title: 'Description',
+      title: 'Description (140-156 characters)',
       type: 'string',
     }),
     defineField({

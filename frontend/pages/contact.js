@@ -1,8 +1,32 @@
-import React from 'react';
+import Head from 'next/head';
+import styles from '../styles/Contact.module.css';
 
 const contact = () => {
+
+    const titleTag = `CoderGuides | Contact`;
+
     return (
-        <div style={{ padding: '8em' }}>Contact Page</div>
+        <>
+            <Head>
+                <title>{titleTag}</title>
+                <meta name="description" content="A blog of random content" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+
+            <article>
+                <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4em', textAlign: 'center' }}>
+                    <div className={styles.headerBox}>
+                        <h1 className={styles.pageHeader}>
+                            Contact Page
+                        </h1>
+                    </div>
+                </div>
+
+                <div className={styles.pText}>
+                    Content goes here
+                </div>
+            </article>
+        </>
     );
 };
 

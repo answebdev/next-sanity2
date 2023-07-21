@@ -86,7 +86,7 @@ const Post = ({ post }) => {
         body = [],
     } = post;
 
-    const titleTag = `Bacon Blog | ${title}`;
+    const titleTag = `CoderGuides | ${title}`;
 
     return (
         <>
@@ -96,7 +96,8 @@ const Post = ({ post }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div
+            {/* HERO SECTION */}
+            {/* <div
                 className={styles.heroImage}
                 style={{
                     backgroundImage: `linear-gradient( 0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${urlFor(
@@ -109,12 +110,17 @@ const Post = ({ post }) => {
                         <span className={styles.heroHeaderSpan}>{title}</span>
                     </h1>
                 </div>
-            </div>
+            </div> */}
 
             <article>
-                <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '2em', textAlign: 'center' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4em', textAlign: 'center' }}>
                     <div className={styles.postTitleBox}>
                         <h1 className={styles.postTitle}>{title}</h1>
+
+                        <div style={{ marginBottom: '50px', fontSize: '20px' }}>
+                            <p className={styles.date}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p>
+                        </div>
+
                         {categories && (
                             <div>
                                 {categories.map(
@@ -125,7 +131,8 @@ const Post = ({ post }) => {
                             </div>
                         )}
 
-                        <p className={styles.postAuthor}>By {name}</p>
+                        {/* AUTHOR AVATAR */}
+                        {/* <p className={styles.postAuthor}>By {name}</p>
                         {authorImage && (
                             <div>
                                 <img
@@ -134,13 +141,17 @@ const Post = ({ post }) => {
                                     alt={`${name}`}
                                 />
                             </div>
-                        )}
+                        )} */}
+
                     </div>
                 </div>
 
                 <div className={styles.pText}>
-                    <p className={styles.date}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p>
-                    <p><em>{description}</em></p>
+                    {/* <p className={styles.date}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p> */}
+                    <p className={styles.description}>{description}</p>
+
+                    <div className={styles.separator}></div>
+
                     <PortableText value={body} components={ptComponents} />
 
                     <br />
