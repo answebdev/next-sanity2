@@ -8,7 +8,7 @@
   /* background: steelblue; */
   /* background: #1a2027; */
   color: #ffffff;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--headerFontFamily);
 }
 
 .navbar .ulElement {

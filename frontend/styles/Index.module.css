@@ -20,8 +20,7 @@
 }
 
 .postLink {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: tomato;
+  font-family: var(--headerFontFamily);
   font-size: 18px;
   font-size: 16px;
 
@@ -48,8 +47,8 @@
 }
 
 .dateText {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: rgba(0, 0, 0, 0.6);
+  font-family: var(--headerFontFamily);
+  /* color: rgba(0, 0, 0, 0.6); */
   margin-bottom: 5px;
 
   color: #6c757d;
@@ -74,7 +73,7 @@
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #ffffff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -92,14 +91,14 @@
 .card_title {
   /* font-size: 20px; */
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--headerFontFamily);
   /* font-size: 18px; */
   font-weight: 700;
 }
 
 .card_text {
   /* font-family: 'Source Sans Pro', sans-serif; */
-  font-family: 'Source Serif Pro', serif;
+  /* font-family: 'Source Serif Pro', serif; */
   line-height: 1.5;
   font-size: 18px;
 }
@@ -129,7 +128,7 @@
   text-align: center;
   border-radius: 2em;
   font-size: 12px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--headerFontFamily);
 }
 
 /* ===== MEDIA QUERIES ===== */

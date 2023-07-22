@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   padding: 20px;
-  background-color: #000;
+  background-color: #000000;
   /* background-color: #1a2027; */
   text-align: center;
 }
@@ -14,8 +14,8 @@
 
 .footerText {
   /* font-family: 'Poppins', sans-serif; */
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
+  font-family: var(--headerFontFamily);
+  color: #ffffff;
   margin-top: 5px;
   font-size: 12.5px;
   letter-spacing: 1px;

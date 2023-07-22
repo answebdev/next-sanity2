@@ -8,12 +8,12 @@
   background: #ff6347;
   background: steelblue;
   /* background: url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
-  color: white;
+  color: #ffffff;
   font-size: 30px;
 }
 
 .headerText {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--headerFontFamily);
 }
 
 /* MEDIA QUERIES */

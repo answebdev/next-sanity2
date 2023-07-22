@@ -4,19 +4,18 @@
 
 .pText {
   padding: 4em 12em;
-  color: var(--textColor);
   line-height: 1.8;
   font-size: 20px;
 }
 
-.pText a {
+/* .pText a {
   color: tomato;
 }
 
 .pText a:hover {
   color: tomato;
   text-decoration: underline;
-}
+} */
 
 /* ===== MEDIA QUERIES ===== */
 

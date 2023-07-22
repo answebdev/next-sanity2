@@ -23,54 +23,21 @@ const ptComponents = {
             }
             return (
                 <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-
-                    {/* Fancybox - styles in global.css */}
-                    {/* <figure>
-                        <a href={urlFor(value).fit('max').auto('format')} data-fancybox="single" data-caption={value.caption}>
-                            <img className={styles.pImage}
-                                alt={value.alt || ' '}
-                                loading='lazy'
-                                src={urlFor(value).fit('max').auto('format')}
-                            />
-                        </a>
-                        <figcaption className={styles.captionText}>{value.caption}</figcaption>
-                    </figure> */}
-
                     <figure>
                         <img className={styles.pImage}
                             alt={value.alt || ' '}
-                            // loading='lazy'
+                            loading='lazy'
                             src={urlFor(value).fit('max').auto('format')}
                         />
                         <figcaption className={styles.captionText}>{value.caption}</figcaption>
                     </figure>
-
                     <br />
                 </div>
-                //    <div>
-                //      <img
-                //         alt={value.alt || ' '}
-                //         loading='lazy'
-                //         src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-                //     />
-                //     <br />
-                //    </div>
             );
         },
         code: (props) => {
             return (<Code language={props.value.language} code={props.value.code} highlightedLines={props.value.highlightedLines} />);
         },
-        // marks: {
-        //     link: ({ children, mark }) => {
-        //         mark.blank ? (
-        //             <a href={mark.href} target='_blank' rel='noopener noreferrer'>
-        //                 {children}
-        //             </a>
-        //         ) : (
-        //             <a href={mark.href}>{children}</a>
-        //         );
-        //     },
-        // }
     },
 };
 
@@ -130,24 +97,20 @@ const Post = ({ post }) => {
                                 )}
                             </div>
                         )}
-
-                        {/* AUTHOR AVATAR */}
-                        {/* <p className={styles.postAuthor}>By {name}</p>
-                        {authorImage && (
-                            <div>
-                                <img
-                                    className={styles.avatar}
-                                    src={urlFor(authorImage).width(300).url()}
-                                    alt={`${name}`}
-                                />
-                            </div>
-                        )} */}
-
                     </div>
                 </div>
 
                 <div className={styles.pText}>
-                    {/* <p className={styles.date}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p> */}
+
+                    {/* <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+                        <img style={{ width: '80%', height: 'auto', textAlign: 'center' }}
+                            src={urlFor(mainImage).url()}
+                            alt={`${title}`}
+                        />
+                    </div>
+
+                    <br /> */}
+
                     <p className={styles.description}>{description}</p>
 
                     <div className={styles.separator}></div>

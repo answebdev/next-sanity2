@@ -63,7 +63,7 @@ const Index = () => {
   // https://stackoverflow.com/questions/70635704/sanity-posts-display-all-categories-not-just-ones-associated-with-post
 
   return (
-    <div>
+    <>
       <Header />
       <div className={styles.container}>
         <Head>
@@ -134,7 +134,7 @@ const Index = () => {
         ))} */}
 
       </div >
-    </div>
+    </>
   );
 };
 
