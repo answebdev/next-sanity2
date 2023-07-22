@@ -80,9 +80,9 @@
     text-align: center;
   }
 
-  .dasImg {
+  /* .dasImg {
     display: none;
-  }
+  } */
 }
 
 @media screen and (max-width: 408px) {
@@ -93,6 +93,10 @@
     bottom: 0;
     right: 0;
     left: 0;
+  }
+
+  .dasImg {
+    display: none;
   }
 
   .button {
