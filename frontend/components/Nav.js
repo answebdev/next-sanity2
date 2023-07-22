@@ -43,14 +43,12 @@
 
 
 import Link from 'next/link';
-// import classes from '../styles/Nav.module.css';
 import styles from '../styles/Nav.module.css';
 
 const Navbar = () => (
     <header className={styles.navbar}>
         <div className={`${styles.navbarTitle} ${styles.navbarItem}`}>
             <div>
-                {/* <span>Bacon Blog</span> */}
                 <li className={styles.navbarItem}>
                     <Link className={styles.brandLink} href='/'>CoderGuides</Link>
                 </li>
