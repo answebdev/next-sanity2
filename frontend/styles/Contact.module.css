@@ -1,16 +1,16 @@
-.brap {
+.mainDiv {
   display: flex;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: -100;
+  /* z-index: -100; */
 
   padding: 4em;
 }
 
-.innerBrap {
+.innerDiv {
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -70,11 +70,11 @@
 }
 
 @media screen and (max-width: 785px) {
-  .brap {
+  .mainDiv {
     padding: 2em 4em 0 4em;
   }
 
-  .innerBrap {
+  .innerDiv {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -86,7 +86,7 @@
 }
 
 @media screen and (max-width: 408px) {
-  .brap {
+  .mainDiv {
     display: flex;
     position: absolute;
     top: 0;
@@ -105,7 +105,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .brap {
+  .mainDiv {
     padding: 3em 4em 0 4em;
   }
 
@@ -123,7 +123,7 @@
 }
 
 @media screen and (max-width: 250px) {
-  .brap {
+  .mainDiv {
     padding: 3em 4em 0 4em;
   }
 

@@ -19,11 +19,16 @@
   margin-right: 16px;
 }
 
+/* Note: In order to center the main div vertically and horizontally on the Contact page,
+the class .mainDiv was added to the CSS. As a result, the navbar links became unclickable.
+Therefore, z-index is added here to help fix this issue: */
 .navbar li {
+  z-index: 20;
   list-style: none;
 }
 
 .navbarTitle {
+  z-index: 20;
   margin-right: auto;
   font-size: 125%;
   padding: 12px 16px;

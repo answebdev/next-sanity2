@@ -78,8 +78,8 @@ const contact = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <article className={styles.brap}>
-                <div className={styles.innerBrap}>
+            <article className={styles.mainDiv}>
+                <div className={styles.innerDiv}>
                     <div>
                         <Image className={styles.dasImg}
                             src={hello}
