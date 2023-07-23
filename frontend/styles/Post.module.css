@@ -254,6 +254,11 @@
 }
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
+  .container {
+    padding-bottom: 8em;
+    /* background-color: yellow; */
+  }
+
   .postTitleBox {
     padding: 0 2em;
   }
@@ -329,6 +334,11 @@
 }
 
 @media screen and (min-width: 100px) and (max-width: 400px) {
+  .container {
+    padding-bottom: 6em;
+    /* background-color: yellow; */
+  }
+
   .postTitleBox {
     padding: 0 2em;
   }
