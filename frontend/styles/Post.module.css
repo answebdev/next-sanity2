@@ -1,5 +1,25 @@
+.pImageContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .container {
-  padding-bottom: 4em;
+  /* padding-bottom: 4em; */
+  padding: 4em 12em 8em 12em;
+}
+
+.innerDiv {
+  display: flex;
+  justify-content: center;
+  /* padding-top: 4em; */
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.dateContainer {
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
 /* .main {
@@ -160,7 +180,7 @@
 }
 
 .pText {
-  padding: 4em 12em;
+  /* padding: 4em 12em; */
   line-height: 1.8;
   font-size: 20px;
 }
@@ -236,119 +256,24 @@
 }
 
 /* ===== MEDIA QUERIES ===== */
-
-@media screen and (min-width: 769px) and (max-width: 980px) {
-  .postTitleBox {
-    padding: 0 8em;
-  }
-
-  .pText {
-    /* background-color: red; */
-    padding: 4em 8em 2em 8em;
-  }
-
-  .pImage {
-    width: 100%;
-    height: auto;
+@media screen and (max-width: 980px) {
+  .container {
+    padding: 4em;
+    /* background-color: yellow; */
   }
 }
 
-@media screen and (min-width: 641px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     padding-bottom: 8em;
     /* background-color: yellow; */
   }
-
-  .postTitleBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .pImage {
-    width: 100%;
-    height: auto;
-  }
 }
 
-@media screen and (min-width: 551px) and (max-width: 640px) {
-  .postTitleBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .pImage {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 471px) and (max-width: 550px) {
-  .postTitleBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .pImage {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 431px) and (max-width: 470px) {
-  .postTitleBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .pImage {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 401px) and (max-width: 430px) {
-  .postTitleBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .pImage {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 100px) and (max-width: 400px) {
+@media screen and (max-width: 320px) {
   .container {
+    padding: 2em;
     padding-bottom: 6em;
-    /* background-color: yellow; */
-  }
-
-  .postTitleBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .pImage {
-    width: 100%;
-    height: auto;
+    /* background-color: tomato; */
   }
 }

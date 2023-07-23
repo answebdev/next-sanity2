@@ -22,7 +22,7 @@ const ptComponents = {
                 return null;
             }
             return (
-                <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+                <div className={styles.pImageContainer}>
                     <figure>
                         <img className={styles.pImage}
                             alt={value.alt || ' '}
@@ -80,11 +80,11 @@ const Post = ({ post }) => {
             </div> */}
 
             <article className={styles.container}>
-                <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4em', textAlign: 'center' }}>
+                <div className={styles.innerDiv}>
                     <div className={styles.postTitleBox}>
                         <h1 className={styles.postTitle}>{title}</h1>
 
-                        <div style={{ marginBottom: '50px', fontSize: '20px' }}>
+                        <div className={styles.dateContainer}>
                             <p className={styles.date}>{format(new Date(publishedAt), 'MMMM dd, yyyy')}</p>
                         </div>
 
@@ -119,7 +119,7 @@ const Post = ({ post }) => {
 
                     <br />
 
-                    <Link style={{ color: 'tomato' }} href='/'>Home</Link>
+                    <Link href='/'>Home</Link>
                 </div>
             </article>
         </>
