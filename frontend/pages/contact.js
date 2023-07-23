@@ -64,15 +64,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import hello from '../assets/img/hello.webp';
-// import styles from '../styles/Contact.module.css';
-import classes from '../styles/Contact.module.css';
+import styles from '../styles/Contact.module.css';
 
 const contact = () => {
 
     const titleTag = `CoderGuides | Contact`;
 
     return (
-        <div className={classes.Error}>
+        <>
             <Head>
                 <title>{titleTag}</title>
                 <meta name="description" content="A blog of random content" />
@@ -116,9 +115,9 @@ const contact = () => {
 
                 </div>
             </article > */}
-            <header className={classes.AppHeader}>
-                <div className={classes.MainDiv2}>
-                    <Image className={classes.AppLogo}
+            <article className={styles.AppHeader}>
+                <div className={styles.MainDiv2}>
+                    <Image className={styles.AppLogo}
                         src={hello}
                         alt='Contact Page Image'
                         priority={true}
@@ -126,25 +125,25 @@ const contact = () => {
                     <br />
                     <div>
                         <div>
-                            <p className={classes.headerText}>Hello. I'm Adolf. Nice to meet you!</p>
-                            <p className={classes.subheaderText}>I'm a frontend developer based in San Diego. I like to write about coding.</p>
-                            <p className={classes.subheaderText}>Feel free to connect with me.</p>
+                            <p className={styles.headerText}>Hello. I'm Adolf. Nice to meet you!</p>
+                            <p className={styles.subheaderText}>I'm a frontend developer based in San Diego. I like to write about coding.</p>
+                            <p className={styles.subheaderText}>Feel free to connect with me.</p>
                         </div>
                         {/* </div>
-                    <div className={classes.buttonContainer}> */}
-                        <Link className={classes.button}
+                    <div className={styles.buttonContainer}> */}
+                        <Link className={styles.button}
                             href='https://adolfschmuck.com/'
                             rel='noopener noreferrer'
                             target='_blank'>
                             Portfolio
                         </Link>
-                        <Link className={classes.button}
+                        <Link className={styles.button}
                             href='https://www.linkedin.com/in/adolf-schmuck/'
                             rel='noopener noreferrer'
                             target='_blank'>
                             LinkedIn
                         </Link>
-                        <Link className={classes.button}
+                        <Link className={styles.button}
                             href='https://www.buymeacoffee.com/'
                             rel='noopener noreferrer'
                             target='_blank'>
@@ -152,8 +151,8 @@ const contact = () => {
                         </Link>
                     </div>
                 </div>
-            </header>
-        </div>
+            </article>
+        </>
     );
 };
 

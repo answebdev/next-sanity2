@@ -79,7 +79,7 @@ const Post = ({ post }) => {
                 </div>
             </div> */}
 
-            <article>
+            <article className={styles.container}>
                 <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4em', textAlign: 'center' }}>
                     <div className={styles.postTitleBox}>
                         <h1 className={styles.postTitle}>{title}</h1>
