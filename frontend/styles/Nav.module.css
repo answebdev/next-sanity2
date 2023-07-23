@@ -4,10 +4,10 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  background: #000000;
+  background: var(--navbarColor);
   /* background: steelblue; */
   /* background: #1a2027; */
-  color: #ffffff;
+  color: var(--navbarTextColor);
   font-family: var(--headerFontFamily);
 }
 
@@ -42,7 +42,7 @@
 
 .brandLink,
 .navLink {
-  color: #ffffff;
+  color: var(--navbarTextColor);
   text-decoration: none;
 }
 
@@ -51,7 +51,7 @@
 } */
 
 .navLink:hover {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid var(--navbarHoverBorderColor);
 }
 
 /* ===== MEDIA QUERIES ===== */

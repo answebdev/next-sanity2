@@ -8,6 +8,11 @@
 :root {
   --headerFontFamily: 'Source Sans Pro', sans-serif;
   --mainTextFontFamily: 'Source Serif Pro', serif;
+  --navbarColor: #000000;
+  --navbarTextColor: #ffffff;
+  --navbarHoverBorderColor: #ffffff;
+  --footerColor: #000000;
+  --FooterTextColor: #ffffff;
 }
 
 /* Styles for Sticky (But Not Fixed) Footer */

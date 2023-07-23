@@ -115,9 +115,9 @@ const contact = () => {
 
                 </div>
             </article > */}
-            <article className={styles.AppHeader}>
-                <div className={styles.MainDiv2}>
-                    <Image className={styles.AppLogo}
+            <article className={styles.mainDiv}>
+                <div className={styles.innerDiv}>
+                    <Image className={styles.MainImage}
                         src={hello}
                         alt='Contact Page Image'
                         priority={true}
