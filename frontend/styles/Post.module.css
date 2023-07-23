@@ -273,7 +273,7 @@
 @media screen and (max-width: 320px) {
   .container {
     padding: 2em;
-    padding-bottom: 6em;
+    padding-bottom: 8em;
     /* background-color: tomato; */
   }
 }
