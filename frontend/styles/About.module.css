@@ -1,91 +1,116 @@
+.mainDiv {
+  padding: 4em 4em 8em 4em;
+}
+
 .pageHeader {
-  font-size: 42px;
+  font-size: 32px;
+  font-family: var(--headerFontFamily);
 }
 
-.pText {
-  padding: 4em 12em;
-  line-height: 1.8;
-  font-size: 20px;
+.textAndImageContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* .pText a {
-  color: tomato;
+.mainTextDiv {
+  width: 100%;
+  height: auto;
+  margin-right: 80px;
+  line-height: 1.5;
+  font-family: var(--mainTextFontFamily);
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
-.pText a:hover {
-  color: tomato;
-  text-decoration: underline;
-} */
+.mainImage {
+  width: 50%;
+  height: 50%;
+}
+
+.copyrightDisclaimerContainer {
+  margin-top: 20px;
+}
+
+.copyright {
+  font-family: var(--mainTextFontFamily);
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.disclaimer {
+  font-family: var(--mainTextFontFamily);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
 
 /* ===== MEDIA QUERIES ===== */
-
-@media screen and (min-width: 769px) and (max-width: 980px) {
-  .headerBox {
-    padding: 0 8em;
-  }
-
-  .pText {
-    /* background-color: red; */
-    padding: 4em 8em 2em 8em;
+@media screen and (max-width: 1440px) {
+  .mainImage {
+    width: 35%;
+    height: 35%;
   }
 }
 
-@media screen and (min-width: 641px) and (max-width: 768px) {
-  .headerBox {
-    padding: 0 2em;
+@media screen and (max-width: 885px) {
+  .mainDiv {
+    padding-right: 2em;
+    padding-left: 2em;
   }
 
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-}
-
-@media screen and (min-width: 551px) and (max-width: 640px) {
-  .headerBox {
-    padding: 0 2em;
+  .textAndImageContainer {
+    display: flex;
+    flex-direction: column;
   }
 
-  .pText {
-    padding: 4em 2em 2em 2em;
+  .mainImage {
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
   }
 }
 
-@media screen and (min-width: 471px) and (max-width: 550px) {
-  .headerBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
+@media screen and (max-width: 590px) {
+  .mainImage {
+    width: 100%;
+    height: 100%;
   }
 }
 
-@media screen and (min-width: 431px) and (max-width: 470px) {
-  .headerBox {
-    padding: 0 2em;
+@media screen and (max-width: 408px) {
+  .mainDiv {
+    padding: 2em 4em 6em 4em;
+    /* padding-bottom: 4em; */
   }
 
-  .pText {
-    padding: 4em 2em 2em 2em;
-  }
-}
-
-@media screen and (min-width: 401px) and (max-width: 430px) {
-  .headerBox {
-    padding: 0 2em;
-  }
-
-  .pText {
-    padding: 4em 2em 2em 2em;
+  .mainImage {
+    width: 100%;
+    height: 100%;
   }
 }
 
-@media screen and (min-width: 100px) and (max-width: 400px) {
-  .headerBox {
-    padding: 0 2em;
+@media screen and (max-width: 320px) {
+  .pageHeader {
+    font-size: 26px;
   }
 
-  .pText {
-    padding: 4em 2em 2em 2em;
+  .mainImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mainTextDiv {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .pageHeader {
+    font-size: 20px;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: 100%;
   }
 }

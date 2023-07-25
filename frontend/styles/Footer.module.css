@@ -17,6 +17,7 @@
   font-family: var(--headerFontFamily);
   color: var(--FooterTextColor);
   margin-top: 5px;
-  font-size: 12.5px;
+  /* font-size: 12.5px; */
+  font-size: 14.5px;
   letter-spacing: 1px;
 }

@@ -117,7 +117,7 @@ const contact = () => {
             </article > */}
             <article className={styles.mainDiv}>
                 <div className={styles.innerDiv}>
-                    <Image className={styles.MainImage}
+                    <Image className={styles.mainImage}
                         src={hello}
                         alt='Contact Page Image'
                         priority={true}
@@ -135,7 +135,7 @@ const contact = () => {
                             href='https://adolfschmuck.com/'
                             rel='noopener noreferrer'
                             target='_blank'>
-                            Portfolio
+                            Website
                         </Link>
                         <Link className={styles.button}
                             href='https://www.linkedin.com/in/adolf-schmuck/'

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import client from '../client';
 import { format } from 'date-fns';
 import imageUrlBuilder from '@sanity/image-url';
+import TextField from '@mui/material/TextField';
 import Header from '../components/Header';
 import styles from '../styles/Index.module.css';
 
@@ -35,6 +36,7 @@ function urlFor(source) {
 
 const Index = () => {
   const [posts, setPosts] = useState([]);
+  const [query1, setQuery1] = useState('');
 
   useEffect(() => {
     client.fetch(
@@ -76,37 +78,63 @@ const Index = () => {
 
         <br />
 
-        {posts.map((p, i) => (
-          <div key={i} className={styles.postContainer}>
-            <div className={styles.card}>
-              <div className={styles.card_body}>
-                <div className={styles.card_title}>
-                  <img className={styles.mainImage}
-                    src={urlFor(p.mainImage).url()}
-                    alt={`${p.title}`}
-                  />
-                  <strong>{p.title}</strong>
+        <div>
+          <TextField
+            sx={{
+              width: '300px', marginBottom: '40px'
+            }}
+            onChange={(event) => setQuery1(event.target.value)}
+            id='standard-basic'
+            label='Search articles'
+            variant='standard'
+          />
+        </div>
+
+        {posts
+          .filter((item) => {
+            if (query1 === '') {
+              return item;
+            } else if (
+              item.title.toLowerCase().includes(query1.toLowerCase())
+            ) {
+              return item;
+            }
+            // If none of the if or else-if condition matches
+            return false;
+          })
+          .map((p, i) => (
+            <div key={i} className={styles.postContainer}>
+              <div className={styles.card}>
+                <div className={styles.card_body}>
+                  <div className={styles.card_title}>
+                    <img className={styles.mainImage}
+                      src={urlFor(p.mainImage).url()}
+                      alt={`${p.title}`}
+                    />
+                    <strong>{p.title}</strong>
+                  </div>
+                  <div className={styles.card_text}>
+                    <p>
+                      {p.description}
+                    </p>
+                  </div>
+                  <div className={styles.badgeContainer}>
+                    {p.categories.map((category, i) => (
+                      <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
+                    ))}
+                  </div>
+                  <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                    Read More
+                  </Link>
                 </div>
-                <div className={styles.card_text}>
-                  <p>
-                    {p.description}
-                  </p>
+                <div className={styles.card_footer}>
+                  <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
                 </div>
-                <div className={styles.badgeContainer}>
-                  {p.categories.map((category, i) => (
-                    <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
-                  ))}
-                </div>
-                <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
-                  Read More
-                </Link>
-              </div>
-              <div className={styles.card_footer}>
-                <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+
+
 
 
         {/* ORIGINAL CARD */}

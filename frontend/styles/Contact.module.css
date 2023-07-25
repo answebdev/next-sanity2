@@ -2,8 +2,8 @@
   letter-spacing: 1.5px;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: calc(10px + 2vmin);
   padding-bottom: 3em;
 }
@@ -15,7 +15,7 @@
   padding: 4em;
 }
 
-.MainImage {
+.mainImage {
   width: 50%;
   height: auto;
   pointer-events: none;
@@ -60,7 +60,7 @@
 
 /* ===== MEDIA QUERIES ===== */
 @media screen and (max-width: 1440px) {
-  .MainImage {
+  .mainImage {
     width: 35%;
     height: auto;
     margin-right: 80px;
@@ -79,7 +79,7 @@
     text-align: center;
   }
 
-  .MainImage {
+  .mainImage {
     width: 50%;
     height: auto;
     margin-right: 0;
@@ -87,7 +87,7 @@
 }
 
 @media screen and (max-width: 590px) {
-  .MainImage {
+  .mainImage {
     width: 80%;
     height: auto;
   }
@@ -103,7 +103,7 @@
     padding: 0;
   }
 
-  .MainImage {
+  .mainImage {
     width: 80%;
     height: auto;
   }
