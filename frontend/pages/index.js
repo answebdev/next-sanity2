@@ -99,7 +99,7 @@ const Index = () => {
             ) {
               return item;
             }
-            // If none of the if or else-if condition matches
+            // If none of the if or else-if conditions match
             return false;
           })
           .map((p, i) => (
