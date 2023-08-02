@@ -6,9 +6,20 @@ import client from '../client';
 import { format } from 'date-fns';
 import imageUrlBuilder from '@sanity/image-url';
 import TextField from '@mui/material/TextField';
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
+
 import Header from '../components/Header';
 import styles from '../styles/Index.module.css';
 
+// Live Site: https://coderguides.vercel.app/
+// Deployed Studio: https://coderguides.sanity.studio/desk
+
+// OLD URLS:
 // Live Site: https://bacon-blog.vercel.app/
 // Deployed Studio: https://bacon-blog.sanity.studio/desk
 
@@ -37,6 +48,19 @@ function urlFor(source) {
 const Index = () => {
   const [posts, setPosts] = useState([]);
   const [query1, setQuery1] = useState('');
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  const ITEM_HEIGHT = 48;
+  const ITEM_PADDING_TOP = 8;
+  const MenuProps = {
+    PaperProps: {
+      style: {
+        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+        width: 250,
+      },
+    },
+  };
 
   useEffect(() => {
     client.fetch(
@@ -56,9 +80,15 @@ const Index = () => {
           publishedAt,
           "categories": categories[]->title
       }`
-    ).then((data) => setPosts(data))
-      .catch(console.error);
+    ).then((data) => {
+      setPosts(data);
+
+      // Get unique categories and remove duplicates
+      const uniqueCategories = [...new Set(data.flatMap(post => post.categories))];
+      setCategories(uniqueCategories);
+    }).catch(console.error);
   }, []);
+
 
   // Resources:
   // https://stackoverflow.com/questions/70348781/how-to-fetch-sanity-blog-categories
@@ -66,7 +96,7 @@ const Index = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className={styles.container}>
         <Head>
           <title>CoderGuides</title>
@@ -75,22 +105,68 @@ const Index = () => {
         </Head>
 
         <h1 className={styles.pageHeader}>Welcome to CoderGuides</h1>
+        <h2 style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontWeight: '400', color: 'rgba(0, 0, 0, 0.6)' }}>
+          A site for coding tutorial guides.
+        </h2>
 
         <br />
 
-        <div>
-          <TextField
-            sx={{
-              width: '300px', marginBottom: '40px'
-            }}
-            onChange={(event) => setQuery1(event.target.value)}
-            id='standard-basic'
-            label='Search articles'
-            variant='standard'
-          />
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <div>
+            <TextField
+              sx={{
+                width: '300px', marginBottom: '40px'
+              }}
+              onChange={(event) => setQuery1(event.target.value)}
+              id='standard-basic'
+              label='Search for articles'
+              variant='standard'
+            />
+          </div>
+
+          {/* Select element to filter by category */}
+          {/* <div>
+          <select
+            value={selectedCategory}
+            onChange={(event) => setSelectedCategory(event.target.value)}
+          >
+            <option value="">All Categories</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div> */}
+
+          <div>
+            <FormControl variant="standard"
+              // sx={{ m: 1, minWidth: 120, paddingLeft: 0 }}
+              style={{ width: '300px', marginBottom: '40px' }}
+            >
+              <InputLabel id="demo-simple-select-standard-label">Search by category</InputLabel>
+              <Select
+                labelId="demo-simple-select-standard-label"
+                id="demo-simple-select-standard"
+                value={selectedCategory}
+                onChange={(event) => setSelectedCategory(event.target.value)}
+                label="Category"
+                MenuProps={MenuProps}
+              >
+                <MenuItem value="">
+                  <strong>All Categories</strong>
+                </MenuItem>
+                {categories.map((category) => (
+                  <MenuItem key={category} value={category}>
+                    {category}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
         </div>
 
-        {posts
+        {/* {posts
           .filter((item) => {
             if (query1 === '') {
               return item;
@@ -132,8 +208,52 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
 
+        {posts
+          .filter((item) => {
+            // Filter by search query and selected category
+            if (query1 === '' && (selectedCategory === '' || item.categories.includes(selectedCategory))) {
+              return true;
+            } else if (
+              item.title.toLowerCase().includes(query1.toLowerCase()) &&
+              (selectedCategory === '' || item.categories.includes(selectedCategory))
+            ) {
+              return true;
+            }
+            return false;
+          })
+          .map((p, i) => (
+            <div key={i} className={styles.postContainer}>
+              <div className={styles.card}>
+                <div className={styles.card_body}>
+                  <div className={styles.card_title}>
+                    <img className={styles.mainImage}
+                      src={urlFor(p.mainImage).url()}
+                      alt={`${p.title}`}
+                    />
+                    <strong>{p.title}</strong>
+                  </div>
+                  <div className={styles.card_text}>
+                    <p>
+                      {p.description}
+                    </p>
+                  </div>
+                  <div className={styles.badgeContainer}>
+                    {p.categories.map((category, i) => (
+                      <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
+                    ))}
+                  </div>
+                  <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                    Read More
+                  </Link>
+                </div>
+                <div className={styles.card_footer}>
+                  <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
+                </div>
+              </div>
+            </div>
+          ))}
 
 
 

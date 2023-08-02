@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../assets/img/logo_about.webp';
+import CoderGuides from '../assets/img/CoderGuides.webp';
 import styles from '../styles/About.module.css';
 
 const about = () => {
@@ -18,23 +18,33 @@ const about = () => {
 
             <article className={styles.mainDiv}>
                 <div>
-                    <h1 className={styles.pageHeader}>Welcome to CoderGuides</h1>
+                    <h1 className={styles.pageHeader}>About CoderGuides</h1>
                 </div>
+
+                <hr />
+                <br />
 
                 <div className={styles.textAndImageContainer}>
                     <div className={styles.mainTextDiv}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Thank you for stopping by. CoderGuides is a site dedicated to articles about coding. Here you will find a variety of coding tutorial guides.
+                        We all know what it's like to be stuck on something and look online for resources to help us. I also realize that there may be more than one way to tackle the topics written about here,
+                        and that these are not the only ways to approach them. But hopefully, the information that is here is useful and will be helpful. Feel free to take a look around.
+                        <br />
+                        <br />
+                        On another note, this is a new version of CoderGuides. I built it with Next.js and Sanity. Some of the articles here come from the original CoderGuides site, thus the older dates.
                     </div>
                     <Image
                         // style={{ width: '50%', height: '50%' }}
                         className={styles.mainImage}
-                        src={logo}
-                        alt='CoderGuides Logo'
+                        src={CoderGuides}
+                        alt='CoderGuides'
                         priority={true}
                     />
                 </div>
 
                 <br />
+
+                <hr />
 
                 <div className={styles.copyrightDisclaimerContainer}>
                     <p className={styles.copyright}>
