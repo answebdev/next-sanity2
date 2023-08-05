@@ -118,7 +118,7 @@ const Index = () => {
           <title>CoderGuides</title>
           <meta name="description" content="A blog of random content" />
           <link rel="icon" href="/favicon.ico" />
-          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         </Head>
 
         <h1 className={styles.pageHeader}>Welcome to CoderGuides</h1>
