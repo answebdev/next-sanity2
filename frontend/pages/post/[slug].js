@@ -6,6 +6,7 @@ import { PortableText } from '@portabletext/react';
 import client from '../../client';
 import { Code } from '../../components/Code';
 import { format } from 'date-fns';
+import ScrollUpButton from 'react-scroll-up-button';
 import styles from '../../styles/Post.module.css';
 
 // Adding Image Caption and Attribution to API.js: https://www.sanity.io/answers/adding-image-caption-and-attribution-to-api-js
@@ -47,7 +48,6 @@ const Post = ({ post }) => {
         name = 'Missing name',
         description,
         categories,
-        authorImage,
         mainImage,
         publishedAt,
         body = [],
@@ -119,7 +119,18 @@ const Post = ({ post }) => {
 
                     <br />
 
-                    <Link href='/'>Home</Link>
+                    {/* <Link href='/'>Home</Link> */}
+                </div>
+
+                <div>
+                    <ScrollUpButton
+                        style={{
+                            marginBottom: '45px',
+                            marginRight: '-15px',
+                            background: 'var(--mainButtonColor)',
+                            borderRadius: '5px',
+                        }}
+                    />
                 </div>
             </article>
         </>
@@ -132,9 +143,7 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   publishedAt,
   mainImage,
   caption,
-  "name": author->name,
   "categories": categories[]->title,
-  "authorImage": author->image,
   body
 }`;
 

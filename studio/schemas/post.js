@@ -24,12 +24,12 @@ export default defineType({
       title: 'Description (140-156 characters)',
       type: 'string',
     }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: { type: 'author' },
-    }),
+    // defineField({
+    //   name: 'author',
+    //   title: 'Author',
+    //   type: 'reference',
+    //   to: { type: 'author' },
+    // }),
     defineField({
       name: 'mainImage',
       title: 'Main image',
@@ -56,15 +56,15 @@ export default defineType({
     }),
   ],
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const { author } = selection;
-      return { ...selection, subtitle: author && `by ${author}` };
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: 'title',
+  //     author: 'author.name',
+  //     media: 'mainImage',
+  //   },
+  //   prepare(selection) {
+  //     const { author } = selection;
+  //     return { ...selection, subtitle: author && `by ${author}` };
+  //   },
+  // },
 });

@@ -53,7 +53,7 @@ const Index = () => {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
 
-  // Material UI Media Queries for search and select components, see:
+  // Material UI Media Queries for search and select components
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesXL = useMediaQuery(theme.breakpoints.down('xl'));
@@ -65,6 +65,7 @@ const Index = () => {
     ...matchesXL && { marginBottom: '40px' }
   };
 
+  // Select component
   const ITEM_HEIGHT = 48;
   const ITEM_PADDING_TOP = 8;
   const MenuProps = {
@@ -83,7 +84,6 @@ const Index = () => {
           slug,
           body,
           description,
-          author,
           mainImage {
               asset -> {
                   _id,
@@ -139,21 +139,6 @@ const Index = () => {
               variant='standard'
             />
           </div>
-
-          {/* Select element to filter by category */}
-          {/* <div>
-          <select
-            value={selectedCategory}
-            onChange={(event) => setSelectedCategory(event.target.value)}
-          >
-            <option value="">All Categories</option>
-            {categories.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </div> */}
 
           <div
 

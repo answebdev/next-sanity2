@@ -186,12 +186,12 @@
 }
 
 .pText a {
-  color: tomato;
+  color: var(--textLinkColor);
 }
 
 .pText a:hover {
-  color: tomato;
-  text-decoration: underline;
+  color: var(--textLinkHoverColor);
+  text-decoration: none;
 }
 
 .description {

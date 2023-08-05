@@ -13,6 +13,10 @@
   --navbarHoverBorderColor: #ffffff;
   --footerColor: #000000;
   --FooterTextColor: #ffffff;
+  --mainButtonColor: steelblue;
+  --mainButtonTextColor: #ffffff;
+  --textLinkColor: steelblue;
+  --textLinkHoverColor: tomato;
 }
 
 /* Styles for Sticky (But Not Fixed) Footer */

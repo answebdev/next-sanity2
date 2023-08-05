@@ -46,6 +46,14 @@
   letter-spacing: 1px;
 }
 
+.textLink {
+  color: var(--textLinkColor);
+}
+
+.textLink:hover {
+  color: var(--textLinkHoverColor);
+}
+
 /* ===== MEDIA QUERIES ===== */
 @media screen and (max-width: 1440px) {
   .mainImage {
