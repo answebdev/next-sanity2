@@ -58,14 +58,14 @@ const Index = () => {
   // https://github.com/mui/material-ui/issues/8778
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
-  const matchesMD = useMediaQuery(theme.breakpoints.only('md'));
+  const matchesLG = useMediaQuery(theme.breakpoints.down('lg'));
   const dynamicStyles = {
     ...matchesSM && {
       minWidth: 'calc(100%)',
       maxWidth: 'calc(100%)',
-      marginBottom: '40px'
+      // marginBottom: '40px'
     },
-    // ...matchesMD && { width: '100%' }
+    ...matchesLG && { marginBottom: '40px' }
   };
 
   const ITEM_HEIGHT = 48;
