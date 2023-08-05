@@ -63,6 +63,7 @@ const Index = () => {
     ...matchesSM && {
       minWidth: 'calc(100%)',
       maxWidth: 'calc(100%)',
+      marginBottom: '40px'
     },
     // ...matchesMD && { width: '100%' }
   };
