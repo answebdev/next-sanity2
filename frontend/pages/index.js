@@ -12,6 +12,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import Header from '../components/Header';
 import styles from '../styles/Index.module.css';
@@ -50,6 +52,20 @@ const Index = () => {
   const [query1, setQuery1] = useState('');
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
+
+  // Material UI Media Queries for search and select components, see:
+  // https://stackoverflow.com/questions/45847090/media-queries-in-material-ui-components
+  // https://github.com/mui/material-ui/issues/8778
+  const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesMD = useMediaQuery(theme.breakpoints.only('md'));
+  const dynamicStyles = {
+    ...matchesSM && {
+      minWidth: 'calc(100%)',
+      maxWidth: 'calc(100%)',
+    },
+    // ...matchesMD && { width: '100%' }
+  };
 
   const ITEM_HEIGHT = 48;
   const ITEM_PADDING_TOP = 8;
@@ -105,18 +121,20 @@ const Index = () => {
         </Head>
 
         <h1 className={styles.pageHeader}>Welcome to CoderGuides</h1>
-        <h2 style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontWeight: '400', color: 'rgba(0, 0, 0, 0.6)' }}>
-          A site for coding tutorial guides.
+        <h2 className={styles.pageSubHeader}>
+          A site for coding tutorial guides
         </h2>
 
         <br />
 
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <div>
+        <div className={styles.searchComponentsContainer}>
+          <div className={styles.searchComponentsInnerDiv}>
             <TextField
-              sx={{
-                width: '300px', marginBottom: '40px'
-              }}
+              className={styles.searchInput}
+              sx={{ ...dynamicStyles }}
+              // sx={{
+              //   width: '300px', marginBottom: '40px'
+              // }}
               onChange={(event) => setQuery1(event.target.value)}
               id='standard-basic'
               label='Search for articles'
@@ -139,10 +157,14 @@ const Index = () => {
           </select>
         </div> */}
 
-          <div>
+          <div
+
+            className={styles.searchComponentsInnerDiv}
+          >
             <FormControl variant="standard"
-              // sx={{ m: 1, minWidth: 120, paddingLeft: 0 }}
-              style={{ width: '300px', marginBottom: '40px' }}
+              className={styles.categorySelect}
+              sx={{ ...dynamicStyles }}
+            // sx={{ m: 1, minWidth: 120, paddingLeft: 0 }}
             >
               <InputLabel id="demo-simple-select-standard-label">Search by category</InputLabel>
               <Select

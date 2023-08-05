@@ -21,7 +21,8 @@ const about = () => {
                     <h1 className={styles.pageHeader}>About CoderGuides</h1>
                 </div>
 
-                <hr />
+                {/* <hr /> */}
+
                 <br />
 
                 <div className={styles.textAndImageContainer}>
@@ -44,7 +45,7 @@ const about = () => {
 
                 <br />
 
-                <hr />
+                {/* <hr /> */}
 
                 <div className={styles.copyrightDisclaimerContainer}>
                     <p className={styles.copyright}>
