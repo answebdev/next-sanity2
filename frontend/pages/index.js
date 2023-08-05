@@ -118,10 +118,12 @@ const Index = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <h1 className={styles.pageHeader}>Welcome to CoderGuides</h1>
-        <h2 className={styles.pageSubHeader}>
-          A site for coding tutorial guides
-        </h2>
+        <div className={styles.mainTitleContainer}>
+          <h1 className={styles.pageHeader}>Welcome to CoderGuides</h1>
+          <h2 className={styles.pageSubHeader}>
+            A site for coding tutorial guides
+          </h2>
+        </div>
 
         <br />
 

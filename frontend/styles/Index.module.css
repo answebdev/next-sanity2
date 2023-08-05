@@ -3,6 +3,10 @@
   padding: 4em 12em 8em 12em;
 }
 
+.mainTitleContainer {
+  margin-bottom: 4em;
+}
+
 .postContainer {
   display: flex;
   justify-content: center;

@@ -26,6 +26,7 @@
 .headerText {
   font-family: var(--headerFontFamily);
   font-size: 24px;
+  /* font-size: 32px; */
   font-weight: 700;
 }
 
@@ -60,11 +61,25 @@
 }
 
 /* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 1460px) {
+  .mainImage {
+    width: 35%;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .mainImage {
     width: 35%;
     height: auto;
     margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .mainImage {
+    width: 50%;
+    height: auto;
   }
 }
 
@@ -81,7 +96,7 @@
   }
 
   .mainImage {
-    width: 50%;
+    width: 75%;
     height: auto;
     margin-right: 0;
   }
