@@ -54,8 +54,6 @@ const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   // Material UI Media Queries for search and select components, see:
-  // https://stackoverflow.com/questions/45847090/media-queries-in-material-ui-components
-  // https://github.com/mui/material-ui/issues/8778
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesXL = useMediaQuery(theme.breakpoints.down('xl'));
@@ -63,7 +61,6 @@ const Index = () => {
     ...matchesSM && {
       minWidth: 'calc(100%)',
       maxWidth: 'calc(100%)',
-      // marginBottom: '40px'
     },
     ...matchesXL && { marginBottom: '40px' }
   };
