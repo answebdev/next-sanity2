@@ -20,7 +20,7 @@ const ptComponents = {
     marks: {
         // internalLink: ({ value, children }) => {
         //     const { slug = {} } = value;
-        //     const href = `/${slug.current}`;
+        //     const href = `/post/${slug.current}`;
         //     return <a href={href}>{children}</a>;
         // },
         link: ({ value, children }) => {
@@ -53,38 +53,12 @@ const ptComponents = {
         code: (props) => {
             return (<Code language={props.value.language} code={props.value.code} highlightedLines={props.value.highlightedLines} />);
         },
-        // marks: {
-        //     link: ({ children, value }) => {
-        //         value.blank ? (
-        //             <a href={value.href} target='_blank' rel='noopener noreferrer'>
-        //                 {children}
-        //             </a>
-        //         ) : (
-        //             <a href={value.href}>{children}</a>
-        //         );
-        //     }
-        // }
     },
 };
 
-// const serializers = {
-//     marks: {
-//         link: ({ children, mark }) => {
-//             mark.blank ? (
-//                 <a href={mark.href} target='_blank' rel='noopener noreferrer'>
-//                     {children}
-//                 </a>
-//             ) : (
-//                 <a href={mark.href}>{children}</a>
-//             );
-//         }
-//     }
-// };
-
 const Post = ({ post }) => {
     const {
-        title = 'Missing title',
-        name = 'Missing name',
+        title,
         description,
         categories,
         mainImage,
