@@ -59,11 +59,11 @@ export default defineType({
                 name: 'href',
                 type: 'url',
               },
-              // {
-              //   title: 'Open in new window',
-              //   name: 'blank',
-              //   type: 'boolean'
-              // }
+              {
+                title: 'Open in new window',
+                name: 'blank',
+                type: 'boolean'
+              },
             ],
           },
         ],
