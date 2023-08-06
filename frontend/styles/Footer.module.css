@@ -7,17 +7,14 @@
   left: 0;
   padding: 20px;
   background-color: var(--footerColor);
-  /* background-color: #1a2027; */
   text-align: center;
 }
 /* ========================= */
 
 .footerText {
-  /* font-family: 'Poppins', sans-serif; */
   font-family: var(--headerFontFamily);
   color: var(--FooterTextColor);
   margin-top: 5px;
-  /* font-size: 12.5px; */
   font-size: 14.5px;
   letter-spacing: 1px;
 }

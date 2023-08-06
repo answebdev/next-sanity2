@@ -16,5 +16,3 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
-
-// Source: https://github.com/bradtraversy/next-crash-course

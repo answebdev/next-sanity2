@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Head from 'next/head';
 import groq from 'groq';
 import imageUrlBuilder from '@sanity/image-url';
@@ -72,7 +72,7 @@ const Post = ({ post }) => {
         <>
             <Head>
                 <title>{titleTag}</title>
-                <meta name="description" content="A blog of random content" />
+                <meta name="description" content="A site for coding tutorial guides" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 

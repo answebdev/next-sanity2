@@ -5,8 +5,6 @@
   display: flex;
   align-items: center;
   background: var(--navbarColor);
-  /* background: steelblue; */
-  /* background: #1a2027; */
   color: var(--navbarTextColor);
   font-family: var(--headerFontFamily);
 }
@@ -45,10 +43,6 @@
   color: var(--navbarTextColor);
   text-decoration: none;
 }
-
-/* .NavLink {
-  margin-right: 16px;
-} */
 
 .navLink:hover {
   border-bottom: 2px solid var(--navbarHoverBorderColor);
@@ -199,33 +193,3 @@
     padding: 0;
   }
 }
-
-/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap'); */
-
-/* .brand {
-  font-size: 20px;
-}
-
-.nav {
-  height: 60px;
-  padding: 10px 40px;
-  background: #000;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
-.nav ul li a {
-  margin: 5px 15px;
-} */
-
-/* Source: https://github.com/bradtraversy/next-crash-course */

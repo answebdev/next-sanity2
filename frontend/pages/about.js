@@ -12,7 +12,7 @@ const about = () => {
         <>
             <Head>
                 <title>{titleTag}</title>
-                <meta name="description" content="A blog of random content" />
+                <meta name="description" content="A site for coding tutorial guides" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -20,8 +20,6 @@ const about = () => {
                 <div>
                     <h1 className={styles.pageHeader}>About CoderGuides</h1>
                 </div>
-
-                {/* <hr /> */}
 
                 <br />
 
@@ -35,7 +33,6 @@ const about = () => {
                         On another note, this is a new version of CoderGuides. I built it with Next.js and Sanity. Some of the articles here come from the original CoderGuides site, thus the older dates.
                     </div>
                     <Image
-                        // style={{ width: '50%', height: '50%' }}
                         className={styles.mainImage}
                         src={CoderGuides}
                         alt='CoderGuides'
@@ -44,8 +41,6 @@ const about = () => {
                 </div>
 
                 <br />
-
-                {/* <hr /> */}
 
                 <div className={styles.copyrightDisclaimerContainer}>
                     <p className={styles.copyright}>

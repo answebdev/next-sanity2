@@ -15,7 +15,6 @@
 .mainTextDiv {
   width: 50%;
   height: auto;
-  /* margin-right: 80px; */
   line-height: 1.5;
   font-family: var(--mainTextFontFamily);
   font-size: 18px;
@@ -94,7 +93,6 @@
 @media screen and (max-width: 408px) {
   .mainDiv {
     padding: 2em 4em 6em 4em;
-    /* padding-bottom: 4em; */
   }
 
   .mainImage {
