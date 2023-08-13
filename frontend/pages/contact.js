@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Button from '@mui/material/Button';
 import Image from 'next/image';
-import hello from '../assets/img/helloy.png';
+import hello from '../assets/img/hello.webp';
 import styles from '../styles/Contact.module.css';
 
 const contact = () => {
@@ -31,24 +30,6 @@ const contact = () => {
                             <p className={styles.subheaderText}>I'm a frontend developer based in San Diego. I like to write about coding.</p>
                             <p className={styles.subheaderText}>Feel free to connect with me.</p>
                         </div>
-                        {/* <Button className={styles.button}
-                            href='https://adolfschmuck.com/'
-                            rel='noopener noreferrer'
-                            target='_blank'>
-                            Website
-                        </Button>
-                        <Button className={styles.button}
-                            href='https://www.linkedin.com/in/adolf-schmuck/'
-                            rel='noopener noreferrer'
-                            target='_blank'>
-                            LinkedIn
-                        </Button>
-                        <Button className={styles.button}
-                            href='https://www.buymeacoffee.com/'
-                            rel='noopener noreferrer'
-                            target='_blank'>
-                            Buy Me a Coffee
-                        </Button> */}
                         <Link className={styles.button}
                             href='https://adolfschmuck.com/'
                             rel='noopener noreferrer'
