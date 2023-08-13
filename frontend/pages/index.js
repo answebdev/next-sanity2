@@ -10,6 +10,7 @@ import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import Button from '@mui/material/Button';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Header from '../components/Header';
 import styles from '../styles/Index.module.css';
@@ -21,8 +22,6 @@ import styles from '../styles/Index.module.css';
 // Live Site: https://bacon-blog.vercel.app/
 // Deployed Studio: https://bacon-blog.sanity.studio/desk
 
-// Create search component (video at 1:16:30 - note video is for Next.js 13): https://www.youtube.com/watch?v=Y6KDk5iyrYE
-// Search by tag/catgeory: https://github.com/answebdev/sanity_portfolio/blob/main/src/container/Work/Work.jsx
 // Next.js Image component: https://nextjs.org/docs/pages/api-reference/components/image
 // Next.js Image Component Overview: https://www.axelerant.com/blog/overview-nextjs-image-component-and-its-powerful-capabilities
 // Buy Me a Coffee: https://www.buymeacoffee.com/
@@ -247,8 +246,21 @@ const Index = () => {
                       <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
                     ))}
                   </div>
-                  <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                  {/* <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
                     Read More
+                  </Link> */}
+                  <Link href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                    <Button
+                      className={styles.postLink}
+                      // sx={{
+                      //   ":hover": {
+                      //     bgcolor: "#3f75a2",
+                      //     color: "white"
+                      //   }
+                      // }}
+                      variant="contained">
+                      Read More
+                    </Button>
                   </Link>
                 </div>
                 <div className={styles.card_footer}>

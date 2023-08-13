@@ -26,11 +26,11 @@ const about = () => {
                 <div className={styles.textAndImageContainer}>
                     <div className={styles.mainTextDiv}>
                         Thank you for stopping by. CoderGuides is a site dedicated to articles about coding. Here you will find a variety of coding tutorial guides.
-                        We all know what it's like to be stuck on something and look online for resources to help us. I also realize that there may be more than one way to tackle the topics written about here,
-                        and that these are not the only ways to approach them. But hopefully, the information that is here is useful and will be helpful. Feel free to take a look around.
+                        We all know what it's like to be stuck on something and look for online resources to help us. This is where CoderGuides comes in. Of course, there may be more than one way to approach the topics written about here,
+                        and the ones presented here are not the only ways. But hopefully, the resources found here are useful and the information will be helpful to those who check it out here. Feel free to take a look around.
                         <br />
                         <br />
-                        On another note, this is a new version of CoderGuides. I built it with Next.js and Sanity. Some of the articles here come from the original CoderGuides site, thus the older dates.
+                        On the tech side of things, this is a new version of CoderGuides. I built it with Next.js and Sanity. Some of the articles here come from my original CoderGuides site, which explains some of the older dates.
                     </div>
                     <Image
                         className={styles.mainImage}

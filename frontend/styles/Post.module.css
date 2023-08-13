@@ -112,8 +112,8 @@
 }
 
 .tagBadge {
-  background-color: tomato;
-  color: #ffffff;
+  background-color: var(--postBadgeColor);
+  color: var(--postBadgeTextColor);
   padding: 6px 10px;
   margin: 0 5px;
   text-align: center;

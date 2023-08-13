@@ -3,18 +3,36 @@
 
 /* GLOBAL VARIABLES */
 
+/* :root {
+  --headerFontFamily: 'Source Sans Pro', sans-serif;
+  --mainTextFontFamily: 'Source Serif Pro', serif;
+  --navbarColor: #24292f;
+  --navbarTextColor: #ffffff;
+  --navbarHoverBorderColor: #ffffff;
+  --footerColor: #24292f;
+  --FooterTextColor: #ffffff;
+  --mainButtonColor: #24292f;
+  --mainButtonTextColor: #ffffff;
+  --textLinkColor: #0969da;
+  --textLinkHoverColor: #ff7900;
+  --postBadgeColor: #ff7900;
+  --postBadgeTextColor: #ffffff;
+} */
+
 :root {
   --headerFontFamily: 'Source Sans Pro', sans-serif;
   --mainTextFontFamily: 'Source Serif Pro', serif;
-  --navbarColor: #000000;
+  --navbarColor: #4682b4;
   --navbarTextColor: #ffffff;
   --navbarHoverBorderColor: #ffffff;
-  --footerColor: #000000;
+  --footerColor: #4682b4;
   --FooterTextColor: #ffffff;
-  --mainButtonColor: steelblue;
+  --mainButtonColor: #4682b4;
   --mainButtonTextColor: #ffffff;
-  --textLinkColor: steelblue;
-  --textLinkHoverColor: tomato;
+  --textLinkColor: #1976d2;
+  --textLinkHoverColor: #ff7900;
+  --postBadgeColor: #ff7900;
+  --postBadgeTextColor: #ffffff;
 }
 
 /* Styles for Sticky (But Not Fixed) Footer */

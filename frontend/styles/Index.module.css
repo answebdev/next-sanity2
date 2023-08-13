@@ -60,6 +60,20 @@
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  text-transform: capitalize;
+}
+
+/* .postLink:hover {
+  background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+} */
+
+.postLink:hover {
+  background-color: #3f75a2;
+  /* background-color: #386890; */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 }
 
 .dateText {
