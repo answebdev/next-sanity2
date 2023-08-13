@@ -29,6 +29,7 @@
   --FooterTextColor: #ffffff;
   --mainButtonColor: #4682b4;
   --mainButtonTextColor: #ffffff;
+  --mainButtonHoverColor: linear-gradient(rgb(0 0 0/15%) 0 0);
   --textLinkColor: #1976d2;
   --textLinkHoverColor: #ff7900;
   --postBadgeColor: #ff7900;
