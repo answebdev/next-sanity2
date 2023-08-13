@@ -31,7 +31,7 @@ const contact = () => {
                             <p className={styles.subheaderText}>I'm a frontend developer based in San Diego. I like to write about coding.</p>
                             <p className={styles.subheaderText}>Feel free to connect with me.</p>
                         </div>
-                        <Button className={styles.button}
+                        {/* <Button className={styles.button}
                             href='https://adolfschmuck.com/'
                             rel='noopener noreferrer'
                             target='_blank'>
@@ -48,8 +48,8 @@ const contact = () => {
                             rel='noopener noreferrer'
                             target='_blank'>
                             Buy Me a Coffee
-                        </Button>
-                        {/* <Link className={styles.button}
+                        </Button> */}
+                        <Link className={styles.button}
                             href='https://adolfschmuck.com/'
                             rel='noopener noreferrer'
                             target='_blank'>
@@ -66,7 +66,7 @@ const contact = () => {
                             rel='noopener noreferrer'
                             target='_blank'>
                             Buy Me a Coffee
-                        </Link> */}
+                        </Link>
                     </div>
                 </div>
             </article>

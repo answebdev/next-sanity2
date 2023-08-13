@@ -60,8 +60,9 @@
 }
 
 .button:hover {
-  background-color: #3f75a2;
+  /* background-color: #3f75a2; */
   /* background-color: #386890; */
+  background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
 }
 
 /* ===== MEDIA QUERIES ===== */

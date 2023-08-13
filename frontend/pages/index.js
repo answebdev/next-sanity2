@@ -246,10 +246,10 @@ const Index = () => {
                       <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
                     ))}
                   </div>
-                  {/* <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                  <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
                     Read More
-                  </Link> */}
-                  <Link href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                  </Link>
+                  {/* <Link href={`/post/${encodeURIComponent(p.slug.current)}`}>
                     <Button
                       className={styles.postLink}
                       // sx={{
@@ -261,7 +261,7 @@ const Index = () => {
                       variant="contained">
                       Read More
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className={styles.card_footer}>
                   <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
