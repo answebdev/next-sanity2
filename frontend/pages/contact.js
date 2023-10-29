@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import hello from '../assets/img/hello.webp';
+import hello from '../assets/img/hello2.webp';
 import styles from '../styles/Contact.module.css';
 
 const contact = () => {
@@ -12,7 +12,7 @@ const contact = () => {
         <>
             <Head>
                 <title>{titleTag}</title>
-                <meta name="description" content="A site for coding tutorial guides" />
+                <meta name="description" content="A site for coding tutorial guides." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 

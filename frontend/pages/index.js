@@ -109,7 +109,7 @@ const Index = () => {
       <div className={styles.container}>
         <Head>
           <title>CoderGuides</title>
-          <meta name="description" content="A site for coding tutorial guides" />
+          <meta name="description" content="A site for coding tutorial guides." />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
