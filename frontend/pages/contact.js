@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import hello from '../assets/img/hello2.webp';
+import hello from '../assets/img/hello.webp';
 import styles from '../styles/Contact.module.css';
 
 const contact = () => {
@@ -13,7 +13,7 @@ const contact = () => {
             <Head>
                 <title>{titleTag}</title>
                 <link rel="icon" href="/favicon.ico" />
-                <meta property="og:image" content="https://i.postimg.cc/wBPwCy9Z/og-image.png" />
+                <meta property="og:image" content="https://i.postimg.cc/wMSL3ms1/og-image.png" />
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1024" />
                 <meta property="og:image:height" content="1024" />

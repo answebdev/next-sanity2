@@ -22,12 +22,12 @@
 :root {
   --headerFontFamily: 'Source Sans Pro', sans-serif;
   --mainTextFontFamily: 'Source Serif Pro', serif;
-  --navbarColor: #4682b4;
+  --navbarColor: #6150c9;
   --navbarTextColor: #ffffff;
   --navbarHoverBorderColor: #ffffff;
-  --footerColor: #4682b4;
+  --footerColor: #6150c9;
   --FooterTextColor: #ffffff;
-  --mainButtonColor: #4682b4;
+  --mainButtonColor: #6150c9;
   --mainButtonTextColor: #ffffff;
   --mainButtonHoverColor: linear-gradient(rgb(0 0 0/15%) 0 0);
   --textLinkColor: #1976d2;
