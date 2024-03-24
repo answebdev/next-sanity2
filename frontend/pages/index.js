@@ -109,8 +109,15 @@ const Index = () => {
       <div className={styles.container}>
         <Head>
           <title>CoderGuides</title>
-          <meta name="description" content="A site for coding tutorial guides." />
           <link rel="icon" href="/favicon.ico" />
+          <meta property="og:image" content="%PUBLIC_URL%/og-img.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1024" />
+          <meta property="og:image:height" content="1024" />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://coderguides.vercel.app/" />
+          <meta property="og:title" content="CoderGuides" />
+          <meta name="description" content="A site for coding tutorial guides." />
         </Head>
 
         <div className={styles.mainTitleContainer}>
@@ -301,4 +308,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Index;;;;
