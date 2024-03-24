@@ -48,6 +48,9 @@ const about = () => {
                 </div>
 
                 <br />
+                <br />
+
+                <hr />
 
                 <div className={styles.copyrightDisclaimerContainer}>
                     <p className={styles.copyright}>
