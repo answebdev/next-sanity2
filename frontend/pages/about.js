@@ -51,7 +51,7 @@ const about = () => {
 
                 <div className={styles.copyrightDisclaimerContainer}>
                     <p className={styles.copyright}>
-                        &copy; 2023 CoderGuides | CoderGuides was created and developed
+                        &copy; 2024 CoderGuides | CoderGuides was created and developed
                         by <Link className={styles.textLink}
                             href='https://adolfschmuck.com/'
                             rel='noopener noreferrer'
