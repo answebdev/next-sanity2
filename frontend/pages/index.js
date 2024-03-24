@@ -110,7 +110,7 @@ const Index = () => {
         <Head>
           <title>CoderGuides</title>
           <link rel="icon" href="/favicon.ico" />
-          <meta property="og:image" content="%PUBLIC_URL%/og_image.png" />
+          <meta property="og:image" content="https://i.postimg.cc/YS3xRkks/og-image.png" />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="1024" />
           <meta property="og:image:height" content="1024" />
