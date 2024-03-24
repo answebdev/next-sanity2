@@ -50,8 +50,6 @@ const about = () => {
                 <br />
                 <br />
 
-                <hr />
-
                 <div className={styles.copyrightDisclaimerContainer}>
                     <p className={styles.copyright}>
                         &copy; 2024 CoderGuides | CoderGuides was created and developed
