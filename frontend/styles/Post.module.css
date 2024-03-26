@@ -96,8 +96,16 @@
   letter-spacing: 20px;
 }
 
+.figure {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .pImage {
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 

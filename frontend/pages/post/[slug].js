@@ -38,7 +38,7 @@ const ptComponents = {
             }
             return (
                 <div className={styles.pImageContainer}>
-                    <figure>
+                    <figure className={styles.figure}>
                         <img className={styles.pImage}
                             alt={value.alt || ' '}
                             loading='lazy'
