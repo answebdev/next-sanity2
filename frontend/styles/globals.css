@@ -3,22 +3,6 @@
 
 /* GLOBAL VARIABLES */
 
-/* :root {
-  --headerFontFamily: 'Source Sans Pro', sans-serif;
-  --mainTextFontFamily: 'Source Serif Pro', serif;
-  --navbarColor: #24292f;
-  --navbarTextColor: #ffffff;
-  --navbarHoverBorderColor: #ffffff;
-  --footerColor: #24292f;
-  --FooterTextColor: #ffffff;
-  --mainButtonColor: #24292f;
-  --mainButtonTextColor: #ffffff;
-  --textLinkColor: #0969da;
-  --textLinkHoverColor: #ff7900;
-  --postBadgeColor: #ff7900;
-  --postBadgeTextColor: #ffffff;
-} */
-
 :root {
   --headerFontFamily: 'Source Sans Pro', sans-serif;
   --mainTextFontFamily: 'Source Serif Pro', serif;
