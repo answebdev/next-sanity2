@@ -64,20 +64,6 @@ export default defineType({
                 name: 'blank',
                 type: 'boolean'
               },
-              // {
-              //   name: 'internalLink',
-              //   type: 'object',
-              //   title: 'Internal link',
-              //   fields: [
-              //     {
-              //       name: 'item',
-              //       type: 'reference',
-              //       to: [
-              //         { type: 'post' },
-              //       ]
-              //     }
-              //   ]
-              // },
             ],
           },
         ],

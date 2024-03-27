@@ -1,6 +1,5 @@
 .mainDiv {
   padding: 4em 4em 8em 4em;
-  /* padding: 4em 8em 8em 8em; */
 }
 
 .pageHeader {
@@ -83,13 +82,6 @@
     height: 100%;
   }
 }
-
-/* @media screen and (max-width: 590px) {
-  .mainImage {
-    width: 100%;
-    height: 100%;
-  }
-} */
 
 @media screen and (max-width: 408px) {
   .mainDiv {

@@ -10,33 +10,8 @@ import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Button from '@mui/material/Button';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Header from '../components/Header';
 import styles from '../styles/Index.module.css';
-
-// Live Site: https://coderguides.vercel.app/
-// Deployed Studio: https://coderguides.sanity.studio/desk
-
-// OLD URLS:
-// Live Site: https://bacon-blog.vercel.app/
-// Deployed Studio: https://bacon-blog.sanity.studio/desk
-
-// Next.js Image component: https://nextjs.org/docs/pages/api-reference/components/image
-// Next.js Image Component Overview: https://www.axelerant.com/blog/overview-nextjs-image-component-and-its-powerful-capabilities
-// Buy Me a Coffee: https://www.buymeacoffee.com/
-
-// DARK THEME
-// For Dark Theme, try using NexUI: https://nextui.org/docs/theme/dark-mode
-// Install 2 dependencies:
-// npm i @nextui-org/react
-// npm i next-themes
-// Then, go here: https://nextui.org/docs/theme/dark-mode#using-next-themes
-// Add the code in Steps 1-3 in '_app.js'; add Step for in 'Nav.js'. That's it.
-// Note: this messes up the CSS, so I need to figure this out.
-// Override Styles: https://nextui.org/docs/theme/override-styles
-
-// Next.js: How to show the default 404 page: https://maxschmitt.me/posts/next-js-default-404-page
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
@@ -98,14 +73,8 @@ const Index = () => {
     }).catch(console.error);
   }, []);
 
-
-  // Resources:
-  // https://stackoverflow.com/questions/70348781/how-to-fetch-sanity-blog-categories
-  // https://stackoverflow.com/questions/70635704/sanity-posts-display-all-categories-not-just-ones-associated-with-post
-
   return (
     <>
-      {/* <Header /> */}
       <div className={styles.container}>
         <Head>
           <title>CoderGuides</title>
@@ -134,9 +103,6 @@ const Index = () => {
             <TextField
               className={styles.searchInput}
               sx={{ ...dynamicStyles }}
-              // sx={{
-              //   width: '300px', marginBottom: '40px'
-              // }}
               onChange={(event) => setQuery1(event.target.value)}
               id='standard-basic'
               label='Search for articles'
@@ -151,7 +117,6 @@ const Index = () => {
             <FormControl variant="standard"
               className={styles.categorySelect}
               sx={{ ...dynamicStyles }}
-            // sx={{ m: 1, minWidth: 120, paddingLeft: 0 }}
             >
               <InputLabel id="demo-simple-select-standard-label">Search by category</InputLabel>
               <Select
@@ -174,50 +139,6 @@ const Index = () => {
             </FormControl>
           </div>
         </div>
-
-        {/* {posts
-          .filter((item) => {
-            if (query1 === '') {
-              return item;
-            } else if (
-              item.title.toLowerCase().includes(query1.toLowerCase())
-            ) {
-              return item;
-            }
-            // If none of the if or else-if conditions match
-            return false;
-          })
-          .map((p, i) => (
-            <div key={i} className={styles.postContainer}>
-              <div className={styles.card}>
-                <div className={styles.card_body}>
-                  <div className={styles.card_title}>
-                    <img className={styles.mainImage}
-                      src={urlFor(p.mainImage).url()}
-                      alt={`${p.title}`}
-                    />
-                    <strong>{p.title}</strong>
-                  </div>
-                  <div className={styles.card_text}>
-                    <p>
-                      {p.description}
-                    </p>
-                  </div>
-                  <div className={styles.badgeContainer}>
-                    {p.categories.map((category, i) => (
-                      <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
-                    ))}
-                  </div>
-                  <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
-                    Read More
-                  </Link>
-                </div>
-                <div className={styles.card_footer}>
-                  <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
-                </div>
-              </div>
-            </div>
-          ))} */}
 
         {posts
           .filter((item) => {
@@ -256,19 +177,6 @@ const Index = () => {
                   <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
                     Read More
                   </Link>
-                  {/* <Link href={`/post/${encodeURIComponent(p.slug.current)}`}>
-                    <Button
-                      className={styles.postLink}
-                      // sx={{
-                      //   ":hover": {
-                      //     bgcolor: "#3f75a2",
-                      //     color: "white"
-                      //   }
-                      // }}
-                      variant="contained">
-                      Read More
-                    </Button>
-                  </Link> */}
                 </div>
                 <div className={styles.card_footer}>
                   <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
@@ -276,36 +184,9 @@ const Index = () => {
               </div>
             </div>
           ))}
-
-
-
-        {/* ORIGINAL CARD */}
-        {/* {posts.map((p, i) => (
-          <div key={i} className={styles.postContainer}>
-            <div className={styles.box}>
-              <br />
-              <img className={styles.mainImage}
-                src={urlFor(p.mainImage).url()}
-                alt={`${p.title}`}
-              />
-              <p className={styles.text}><span className={styles.postTitle}>{p.title}</span></p>
-              <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
-              <p className={styles.text}><span className={styles.postDescription}>{p.description}</span></p><br />
-              <div className={styles.badgeContainer}>
-                {p.categories.map((category, i) => (
-                  <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
-                ))}
-              </div>
-              <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
-                Read More
-              </Link>
-            </div>
-          </div>
-        ))} */}
-
       </div >
     </>
   );
 };
 
-export default Index;;;;
+export default Index;

@@ -49,12 +49,12 @@ const contact = () => {
                             target='_blank'>
                             LinkedIn
                         </Link>
-                        <Link className={styles.button}
+                        {/* <Link className={styles.button}
                             href='https://www.buymeacoffee.com/'
                             rel='noopener noreferrer'
                             target='_blank'>
                             Buy Me a Coffee
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </article>

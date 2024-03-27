@@ -1,4 +1,3 @@
-// import Link from 'next/link';
 import Head from 'next/head';
 import groq from 'groq';
 import imageUrlBuilder from '@sanity/image-url';
@@ -9,20 +8,12 @@ import { format } from 'date-fns';
 import ScrollUpButton from 'react-scroll-up-button';
 import styles from '../../styles/Post.module.css';
 
-// Adding Image Caption and Attribution to API.js: https://www.sanity.io/answers/adding-image-caption-and-attribution-to-api-js
-// Internal and external links with Portable Text: https://www.sanity.io/guides/portable-text-internal-and-external-links
-
 function urlFor(source) {
     return imageUrlBuilder(client).image(source);
 }
 
 const ptComponents = {
     marks: {
-        // internalLink: ({ value, children }) => {
-        //     const { slug = {} } = value;
-        //     const href = `/post/${slug.current}`;
-        //     return <a href={href}>{children}</a>;
-        // },
         link: ({ value, children }) => {
             const { blank, href } = value;
             return blank ?
@@ -76,22 +67,6 @@ const Post = ({ post }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* HERO SECTION */}
-            {/* <div
-                className={styles.heroImage}
-                style={{
-                    backgroundImage: `linear-gradient( 0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${urlFor(
-                        mainImage
-                    ).url()})`,
-                }}
-            >
-                <div className={styles.heroContainer}>
-                    <h1 className={styles.heroHeader}>
-                        <span className={styles.heroHeaderSpan}>{title}</span>
-                    </h1>
-                </div>
-            </div> */}
-
             <article className={styles.container}>
                 <div className={styles.innerDiv}>
                     <div className={styles.postTitleBox}>
@@ -114,25 +89,10 @@ const Post = ({ post }) => {
                 </div>
 
                 <div className={styles.pText}>
-
-                    {/* <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-                        <img style={{ width: '80%', height: 'auto', textAlign: 'center' }}
-                            src={urlFor(mainImage).url()}
-                            alt={`${title}`}
-                        />
-                    </div>
-
-                    <br /> */}
-
                     <p className={styles.description}>{description}</p>
-
                     <div className={styles.separator}></div>
-
                     <PortableText value={body} components={ptComponents} />
-
                     <br />
-
-                    {/* <Link href='/'>Home</Link> */}
                 </div>
 
                 <div>
