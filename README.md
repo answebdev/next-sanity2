@@ -17,23 +17,18 @@ Please check out the live link for CoderGuidese here: [CoderGuides]([https://jis
 
 ## Technologies Used
 
-* React (Hooks)
+* Next.js
 * Sanity CMS
-* React Router
-* React Helmet
-* React Bootstrap
-* React Grid Gallery
-* React Transition Group
-* Lightbox2
-* Framer Motion
+* Material UI
+* date-fns
+* React-Scroll-Up-Button
+* Prism.js
 * Material Icons
 * CSS (CSS Modules)
 * Flexbox
-* Animate.css
 * Google Fonts
-* Font Awesome
 * Facebook Developer Tools (Sharing Debugger)
-* Netlify
+* Vercel
 
 [Back To Top](#Table-of-Contents)
 
@@ -62,35 +57,61 @@ To build the website, I used Sanity so that the client would be able to add and 
   ```
 
 
-The following is the schema in `videos.js` that goes with the Videos Page component:
+The following is the schema in `post.js` that is used to add the data for individual posts (articles):
 
 ```javascript
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'videos',
-  title: 'Videos',
+  name: 'post',
+  title: 'Post',
   type: 'document',
   fields: [
     defineField({
-      name: 'videoUrl',
-      title: 'Video URL',
-      type: 'url',
-    }),
-    defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Title (40 and 50 characters)',
       type: 'string',
     }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description (140-156 characters)',
+      type: 'string',
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'category' } }],
+    }),
+    defineField({
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    }),
   ],
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'contactImage',
-    },
-  },
-})
+});
 
 ```
 
