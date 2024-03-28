@@ -8,7 +8,7 @@ CoderGuides is a blog website built with Next.js on the frontend and Sanity CMS 
 
 ## CoderGuides Live Link
 
-Please check out the live link for CoderGuides here: [CoderGuides]((https://coderguides.vercel.app/) "CoderGuides")
+Please check out the live link for CoderGuides here: [CoderGuides](https://coderguides.vercel.app/ "CoderGuides")
 
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
