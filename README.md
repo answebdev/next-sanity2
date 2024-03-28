@@ -4,11 +4,11 @@
 
 ## Description
 
-Official portfolio website I designed and built for a client, a Korean model who wanted a website to showcase her modeling work and have a way for others to reach out to her for bookings or inquiries with a contact form. By using the Sanity CMS for the website, the client is able to manage her own content on the website.
+CoderGuides is a blog website built with Next.js on the frontend and Sanity CMS on the backend. With Sanity, I am able to manage my content and add, edit, update, and delete articles inside Sanity Studio.
 
 ## CoderGuides Live Link
 
-Please check out the live link for CoderGuidese here: [CoderGuides]([https://jisunkim.netlify.app/](https://coderguides.vercel.app/) "CoderGuides")
+Please check out the live link for CoderGuides here: [CoderGuides]((https://coderguides.vercel.app/) "CoderGuides")
 
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
@@ -34,28 +34,56 @@ Please check out the live link for CoderGuidese here: [CoderGuides]([https://jis
 
 ## Development
 
-The client wanted a portfolio website with a clean design to showcase her modeling work, particulary a selection of photos and videos of her work, as well as a way for others to reach out to her for bookings or inquiries. In order for her to have complete control of her content, I built the website using Sanity, a Content Management System. That way, the client would be able to manage her website's content on her own (e.g., adding and deleting photos and videos, as well as updating and editing text, such as her bio and samples of work on the About Page).
-
-To enhance the showcasing of her photos, I used React Grid Gallery, an image gallery for React that has a design that fit with what the client wanted for the Photos Page. Since the client intends to have a number of photos on show, this gallery is exactly what she had in mind. Furthermore, I also added the use of Lightbox2 so that when a visitor to the site clicks on an image, you get a closer look at the clicked-on image while dimming and disabling the rest of the background, giving a stunning effect that goes well with the image gallery. For animations, I used Framer Motion in certain places, such as on the Landing Page, Photos Page, and Videos Page, for some nice animated effects.
-
-To build the website, I used Sanity so that the client would be able to add and fetch data from Sanity. Sanity uses GROQ, its own open-source query language, as well as schemas that I created. The following example is the GROQ query taken from the Videos Page component in `Videos.js`. The code is put inside a `useEffect` so that the data is fetched when the component loads so that it displays on the page. In this case, the videos (`videoUrl`). The `title` is also fetched. Here, however, the title is not disaplayed on the page. Rather, it is an attribute used to describe the contents of the frame. Finally, the collection here is sorted in descending (`desc`) order.
+CoderGuides is a fully functioning responsive website built with Next.js on the frontend and Sanity CMS for the backend. As new articles are added, they appear at the top, where the newest articles are listed at the top. A visitor to the site can search by article, as well as search by category (e.g., React, Testing, JavaScript, etc.). Since this is a blog website focused on web development and coding, I used Prism.js for syntax highlighting so that I am able to use code snippets in my articles as needed. To be able to use syntax highlighting, I set up and configured the Sanity Studio Portable Text editor, so that I would be able to add code snippets when in articles. In the following example, I made the following configuration in `blockContent.js` so that I would be able to use the following languages in Sanity's text editor.
 
 ```javascript
-  const [videoData, setVideoData] = useState(null);
-  
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "videos"] | order(_createdAt desc) {
-          videoUrl,
-          title
-        }`
-      )
-      .then((data) => setVideoData(data))
-      .catch(console.error);
-  }, []);
+  defineArrayMember({
+    type: 'code',
+    options: {
+      language: 'JavaScript',
+      languageAlternatives: [
+        { title: 'HTML', value: 'html' },
+        { title: 'CSS', value: 'css' },
+        { title: 'JavaScript', value: 'js' },
+        { title: 'JSX', value: 'jsx' },
+        { title: 'SASS', value: 'sass' },
+        { title: 'Liquid', value: 'liquid' },
+        { title: 'Bash', value: 'bash' },
+      ]
+    }
+  }),
   ```
 
+Since this is a site that I would be adding articles to, I used Sanity, a content management system, so that the I would be able to add and fetch my article data. Sanity uses GROQ, its own open-source query language, using the schemas that I created. The following example is the GROQ query taken from the Home Page component in `index.js`. The code is put inside a `useEffect` so that the data is fetched when the component loads so that it displays on the page. In addition, since it is possible for articles to share the same category (more than one article may have the same "React" category, for example), the duplicates are removed, ensuring that there are no duplicates to be found later on in the code when the "Search by category" search menu is created. Additionally, each article card will have its own categories displayed in badges, so that a visitor to the site knows the categories for each article. Finally, the collection here is sorted in descending (`desc`) order.
+
+
+```javascript
+  useEffect(() => {
+    client.fetch(
+      `*[_type == "post"] | order(publishedAt desc){
+          title,
+          slug,
+          body,
+          description,
+          mainImage {
+              asset -> {
+                  _id,
+                  url
+              },
+              alt
+          },
+          publishedAt,
+          "categories": categories[]->title
+      }`
+    ).then((data) => {
+      setPosts(data);
+
+      // Get unique categories and remove duplicates
+      const uniqueCategories = [...new Set(data.flatMap(post => post.categories))];
+      setCategories(uniqueCategories);
+    }).catch(console.error);
+  }, []);
+  ```
 
 The following is the schema in `post.js` that is used to add the data for individual posts (articles):
 
