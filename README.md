@@ -23,7 +23,6 @@ Please check out the live link for CoderGuides here: [CoderGuides](https://coder
 * date-fns
 * React-Scroll-Up-Button
 * Prism.js
-* Material Icons
 * CSS (CSS Modules)
 * Flexbox
 * Google Fonts
