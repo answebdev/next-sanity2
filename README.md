@@ -100,9 +100,9 @@ export default defineType({
 
 ![Screenshot 01](screenshots/cg_screenshot_01.jpeg "Home Page")
 
-![Screenshot 02](screenshots/cg_screenshot_02.jpeg "Search by Category")
+![Screenshot 02](screenshots/cg_screenshot_02.png "Search by Category")
 
-![Screenshot 01](screenshots/cg_screenshot_03.jpeg "Individual Article Page")
+![Screenshot 01](screenshots/cg_screenshot_03.png "Individual Article Page")
 
 ![Screenshot 02](screenshots/cg_screenshot_04.png "Manage Content in Sanity Studio")
 
