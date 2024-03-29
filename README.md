@@ -84,7 +84,7 @@ Since this is a site that I would be adding articles to, I used Sanity, a conten
   }, []);
   ```
 
-The following is the schema in `post.js` that is used to add the data for individual posts (articles):
+I created schemas on the backend in order to define what I want to create for each article. I created separate schemas for categories and posts. The following is the schema in `post.js` that is used to add the data for individual posts (articles):
 
 ```javascript
 import { defineField, defineType } from 'sanity';
