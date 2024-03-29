@@ -84,6 +84,54 @@ Since this is a site that I would be adding articles to, I used Sanity, a conten
   }, []);
   ```
 
+The fetched data is then mapped through and displayed in the frontend.
+```javascript
+        {posts
+          .filter((item) => {
+            // Filter by search query and selected category
+            if (query1 === '' && (selectedCategory === '' || item.categories.includes(selectedCategory))) {
+              return true;
+            } else if (
+              item.title.toLowerCase().includes(query1.toLowerCase()) &&
+              (selectedCategory === '' || item.categories.includes(selectedCategory))
+            ) {
+              return true;
+            }
+            return false;
+          })
+          .map((p, i) => (
+            <div key={i} className={styles.postContainer}>
+              <div className={styles.card}>
+                <div className={styles.card_body}>
+                  <div className={styles.card_title}>
+                    <img className={styles.mainImage}
+                      src={urlFor(p.mainImage).url()}
+                      alt={`${p.title}`}
+                    />
+                    <strong>{p.title}</strong>
+                  </div>
+                  <div className={styles.card_text}>
+                    <p>
+                      {p.description}
+                    </p>
+                  </div>
+                  <div className={styles.badgeContainer}>
+                    {p.categories.map((category, i) => (
+                      <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
+                    ))}
+                  </div>
+                  <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+                    Read More
+                  </Link>
+                </div>
+                <div className={styles.card_footer}>
+                  <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
+                </div>
+              </div>
+            </div>
+          ))}
+```
+
 I created schemas on the backend in order to define what I want to create for each article. I created separate schemas for categories and posts. The following is the schema in `post.js` that is used to add the data for individual posts (articles):
 
 ```javascript
