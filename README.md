@@ -134,7 +134,7 @@ The fetched data is then mapped through and displayed individually as cards on t
 }
 ```
 
-I created schemas on the backend in order to define what I want to create for each article. I created separate schemas for categories and posts. The following is the schema in `post.js` that is used to add the data for individual posts (articles):
+On the backend, I created schemas in order to define the specific information that I want to add for each article (e.g., title, description, image, etc.). I created separate schemas for categories and posts. The following is the schema in `post.js` that is used to add the data for individual posts (articles):
 
 ```javascript
 import { defineField, defineType } from 'sanity';
