@@ -4,11 +4,11 @@
 
 ## Description
 
-Official portfolio website I designed and built for a client, a Korean model who wanted a website to showcase her modeling work and have a way for others to reach out to her for bookings or inquiries with a contact form. By using the Sanity CMS for the website, the client is able to manage her own content on the website.
+CoderGuides is a blog website built with Next.js and Material UI on the frontend and Sanity CMS on the backend. With Sanity, I am able to manage my content and add, edit, update, and delete articles inside Sanity Studio.
 
 ## CoderGuides Live Link
 
-Please check out the live link for CoderGuidese here: [CoderGuides]([https://jisunkim.netlify.app/](https://coderguides.vercel.app/) "CoderGuides")
+Please check out the live link for CoderGuides here: [CoderGuides](https://coderguides.vercel.app/ "CoderGuides")
 
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
@@ -17,80 +17,178 @@ Please check out the live link for CoderGuidese here: [CoderGuides]([https://jis
 
 ## Technologies Used
 
-* React (Hooks)
+* Next.js
 * Sanity CMS
-* React Router
-* React Helmet
-* React Bootstrap
-* React Grid Gallery
-* React Transition Group
-* Lightbox2
-* Framer Motion
-* Material Icons
+* Material UI
+* date-fns
+* React-Scroll-Up-Button
+* Prism.js
 * CSS (CSS Modules)
 * Flexbox
-* Animate.css
 * Google Fonts
-* Font Awesome
 * Facebook Developer Tools (Sharing Debugger)
-* Netlify
+* Vercel
 
 [Back To Top](#Table-of-Contents)
 
 ## Development
 
-The client wanted a portfolio website with a clean design to showcase her modeling work, particulary a selection of photos and videos of her work, as well as a way for others to reach out to her for bookings or inquiries. In order for her to have complete control of her content, I built the website using Sanity, a Content Management System. That way, the client would be able to manage her website's content on her own (e.g., adding and deleting photos and videos, as well as updating and editing text, such as her bio and samples of work on the About Page).
-
-To enhance the showcasing of her photos, I used React Grid Gallery, an image gallery for React that has a design that fit with what the client wanted for the Photos Page. Since the client intends to have a number of photos on show, this gallery is exactly what she had in mind. Furthermore, I also added the use of Lightbox2 so that when a visitor to the site clicks on an image, you get a closer look at the clicked-on image while dimming and disabling the rest of the background, giving a stunning effect that goes well with the image gallery. For animations, I used Framer Motion in certain places, such as on the Landing Page, Photos Page, and Videos Page, for some nice animated effects.
-
-To build the website, I used Sanity so that the client would be able to add and fetch data from Sanity. Sanity uses GROQ, its own open-source query language, as well as schemas that I created. The following example is the GROQ query taken from the Videos Page component in `Videos.js`. The code is put inside a `useEffect` so that the data is fetched when the component loads so that it displays on the page. In this case, the videos (`videoUrl`). The `title` is also fetched. Here, however, the title is not disaplayed on the page. Rather, it is an attribute used to describe the contents of the frame. Finally, the collection here is sorted in descending (`desc`) order.
+CoderGuides is a responsive blog website built with Next.js and Material UI on the frontend and Sanity CMS on the backend. As new articles are added using the configured Sanity Studio interface, they appear at the top of the home page, where the newest articles are listed at the top. A user can click on individual articles to read, where they are directed to the article page. In addition, a visitor to the site can search by article, as well as search by category (e.g., React, Testing, JavaScript, etc.). Since this is a blog website focused on web development and coding, I used Prism.js for syntax highlighting so that I am able to use code snippets in my articles as needed. To be able to use syntax highlighting, I set up and configured the Sanity Studio Portable Text editor, so that I am able to add code snippets in articles. The text editor is fully customizable and I configured it according to what I need to create my articles. In the following snippet, for example, I made the following configuration in `blockContent.js` so that I am able to use the following languages when adding code snippets in Sanity's text editor.
 
 ```javascript
-  const [videoData, setVideoData] = useState(null);
-  
+  defineArrayMember({
+    type: 'code',
+    options: {
+      language: 'JavaScript',
+      languageAlternatives: [
+        { title: 'HTML', value: 'html' },
+        { title: 'CSS', value: 'css' },
+        { title: 'JavaScript', value: 'js' },
+        { title: 'JSX', value: 'jsx' },
+        { title: 'SASS', value: 'sass' },
+        { title: 'Liquid', value: 'liquid' },
+        { title: 'Bash', value: 'bash' },
+      ]
+    }
+  }),
+  ```
+
+Since this is a site that I would be adding articles to, I used Sanity, a content management system, so that I can add and fetch my article data. Sanity uses GROQ, its own open-source query language, using the schemas that I created. The following example is the GROQ query taken from the Home Page component in `index.js`. The code is put inside a `useEffect` so that the data is fetched when the component loads so that it displays on the page. In addition, since it is possible for articles to share the same category (more than one article may have the same "React" category, for example), the duplicates are removed, ensuring that there are no duplicates to be found later on when writing the code for the "Search by category" search menu. Additionally, each article card has its own categories displayed in badges so that a visitor to the site knows the categories for each article. Finally, the collection here is sorted in descending (`desc`) order.
+
+
+```javascript
   useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "videos"] | order(_createdAt desc) {
-          videoUrl,
-          title
-        }`
-      )
-      .then((data) => setVideoData(data))
-      .catch(console.error);
+    client.fetch(
+      `*[_type == "post"] | order(publishedAt desc){
+          title,
+          slug,
+          body,
+          description,
+          mainImage {
+              asset -> {
+                  _id,
+                  url
+              },
+              alt
+          },
+          publishedAt,
+          "categories": categories[]->title
+      }`
+    ).then((data) => {
+      setPosts(data);
+
+      // Get unique categories and remove duplicates
+      const uniqueCategories = [...new Set(data.flatMap(post => post.categories))];
+      setCategories(uniqueCategories);
+    }).catch(console.error);
   }, []);
   ```
 
+The fetched data is then mapped through and displayed individually as cards on the frontend (`index.js`).
+```javascript
+{
+  posts
+    .filter((item) => {
+      // Filter by search query and selected category
+      if (query1 === '' && (selectedCategory === '' || item.categories.includes(selectedCategory))) {
+        return true;
+      } else if (
+        item.title.toLowerCase().includes(query1.toLowerCase()) &&
+        (selectedCategory === '' || item.categories.includes(selectedCategory))
+      ) {
+        return true;
+      }
+      return false;
+    })
+    .map((p, i) => (
+      <div key={i} className={styles.postContainer}>
+        <div className={styles.card}>
+          <div className={styles.card_body}>
+            <div className={styles.card_title}>
+              <img className={styles.mainImage}
+                src={urlFor(p.mainImage).url()}
+                alt={`${p.title}`}
+              />
+              <strong>{p.title}</strong>
+            </div>
+            <div className={styles.card_text}>
+              <p>
+                {p.description}
+              </p>
+            </div>
+            <div className={styles.badgeContainer}>
+              {p.categories.map((category, i) => (
+                <p className={styles.tagBadge} key={i}>{category}&nbsp;</p>
+              ))}
+            </div>
+            <Link className={styles.postLink} href={`/post/${encodeURIComponent(p.slug.current)}`}>
+              Read More
+            </Link>
+          </div>
+          <div className={styles.card_footer}>
+            <p className={styles.text}><span className={styles.dateText}>{format(new Date(p.publishedAt), 'MMMM dd, yyyy')}</span></p>
+          </div>
+        </div>
+      </div>
+    ));
+}
+```
 
-The following is the schema in `videos.js` that goes with the Videos Page component:
+On the backend, I created schemas in order to define the specific information that I want to add for each article (e.g., title, description, image, etc.). I created separate schemas for categories and posts. The following is the schema in `post.js` that is used to add the data for individual posts (articles):
 
 ```javascript
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'videos',
-  title: 'Videos',
+  name: 'post',
+  title: 'Post',
   type: 'document',
   fields: [
     defineField({
-      name: 'videoUrl',
-      title: 'Video URL',
-      type: 'url',
-    }),
-    defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Title (40 and 50 characters)',
       type: 'string',
     }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description (140-156 characters)',
+      type: 'string',
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'category' } }],
+    }),
+    defineField({
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    }),
   ],
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'contactImage',
-    },
-  },
-})
+});
 
 ```
 
@@ -100,9 +198,9 @@ export default defineType({
 
 ![Screenshot 01](screenshots/cg_screenshot_01.jpeg "Home Page")
 
-![Screenshot 02](screenshots/cg_screenshot_02.jpeg "Search by Category")
+![Screenshot 02](screenshots/cg_screenshot_02.png "Search by Category")
 
-![Screenshot 01](screenshots/cg_screenshot_03.jpeg "Individual Article Page")
+![Screenshot 01](screenshots/cg_screenshot_03.png "Individual Article Page")
 
 ![Screenshot 02](screenshots/cg_screenshot_04.png "Manage Content in Sanity Studio")
 
