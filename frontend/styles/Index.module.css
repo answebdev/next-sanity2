@@ -35,6 +35,14 @@
   margin-bottom: 40px;
 }
 
+.categoryPlaceholder {
+  font-family: var(--sans_pro-font);
+}
+
+.categoryText {
+  font-family: var(--sans_pro-font);
+}
+
 .text {
   margin: 5px 0;
 }
