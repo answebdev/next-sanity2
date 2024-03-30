@@ -1,7 +1,7 @@
 /* GLOBAL VARIABLES */
 :root {
-  --headerFontFamily: var(--source_sans_pro-font);
-  --mainTextFontFamily: var(--source_serif_pro-font);
+  --headerFontFamily: var(--sans_pro-font);
+  --mainTextFontFamily: var(--serif_pro-font);
   --navbarColor: #6150c9;
   --navbarTextColor: #ffffff;
   --navbarHoverBorderColor: #ffffff;
