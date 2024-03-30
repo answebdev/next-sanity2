@@ -84,7 +84,7 @@ Since this is a site that I would be adding articles to, I used Sanity, a conten
   }, []);
   ```
 
-The fetched data is then mapped through and displayed as cards on the frontend (`index.js`).
+The fetched data is then mapped through and displayed individually as cards on the frontend (`index.js`).
 ```javascript
 {
   posts
