@@ -5,7 +5,6 @@ import CoderGuides from '../assets/img/CoderGuides.webp';
 import styles from '../styles/About.module.css';
 
 const about = () => {
-
     const titleTag = `CoderGuides | About`;
 
     return (

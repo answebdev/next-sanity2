@@ -5,7 +5,6 @@ import hello from '../assets/img/hello.webp';
 import styles from '../styles/Contact.module.css';
 
 const contact = () => {
-
     const titleTag = `CoderGuides | Contact`;
 
     return (
