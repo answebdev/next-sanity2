@@ -101,9 +101,6 @@ const Index = () => {
         <div className={styles.searchComponentsContainer}>
           <div className={styles.searchComponentsInnerDiv}>
             <TextField
-              InputLabelProps={{
-                style: { fontFamily: 'var(--sans_pro-font)' }
-              }}
               className={styles.searchInput}
               sx={{ ...dynamicStyles }}
               onChange={(event) => setQuery1(event.target.value)}
@@ -122,7 +119,6 @@ const Index = () => {
               sx={{ ...dynamicStyles }}
             >
               <InputLabel
-                className={styles.categoryPlaceholder}
                 id="demo-simple-select-standard-label"
                 htmlFor={'input-id'}>
                 Search by category
@@ -140,7 +136,7 @@ const Index = () => {
                   <strong>All Categories</strong>
                 </MenuItem>
                 {categories.map((category) => (
-                  <MenuItem className={styles.categoryText} key={category} value={category}>
+                  <MenuItem key={category} value={category}>
                     {category}
                   </MenuItem>
                 ))}
