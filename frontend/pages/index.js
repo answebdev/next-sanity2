@@ -118,8 +118,13 @@ const Index = () => {
               className={styles.categorySelect}
               sx={{ ...dynamicStyles }}
             >
-              <InputLabel id="demo-simple-select-standard-label">Search by category</InputLabel>
+              <InputLabel
+                id="demo-simple-select-standard-label"
+                htmlFor={'input-id'}>
+                Search by category
+              </InputLabel>
               <Select
+                inputProps={{ id: 'input-id' }}
                 labelId="demo-simple-select-standard-label"
                 id="demo-simple-select-standard"
                 value={selectedCategory}
