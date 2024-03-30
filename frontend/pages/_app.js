@@ -8,7 +8,6 @@ const sans_pro = Source_Sans_Pro({
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-sans',
 });
 
 const serif_pro = Source_Serif_Pro({
@@ -16,7 +15,6 @@ const serif_pro = Source_Serif_Pro({
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-serif',
 });
 
 function MyApp({ Component, pageProps }) {
